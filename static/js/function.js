@@ -38,5 +38,9 @@ $(document).ready(function () {
 });
 
 
+//$('#message-cancel').val('');
+//$('#message-cancel').next().removeClass('active');
+
+
 var x = document.getElementsByClassName("ingredient");
 x.length;

@@ -12,34 +12,34 @@
     <div class="col s12 m12 l6 xl6 aboutus">
         <h5 class="small-title">Message us :D</h5>
         <form onsubmit="return sendMail(this);" id="mail-form">
-            <div class="row center-form align-items-center message-form">
+            <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">format_list_bulleted</i>
-                    <select>
+                    <select id="subject" name="subject">
                         <option value="" disabled selected>Please select a type of subject.</option>
                         <option value="General">General</option>
                         <option value="Password and recipe data">Password and recipe data</option>
-                        <option value="Other">Other</option>
+                         <option value="Other">Other</option>
                     </select>
                 </div>
 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate" />
-                    <label for="icon_prefix">Name</label>
+                    <input id="sender_name" name="sender_name" type="text" class="validate" />
+                    <label for="sender_name">Name</label>
                 </div>
 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">email</i>
-                    <input id="email" type="email" class="validate" />
+                    <input id="email" name="email" type="email" class="validate" />
                     <label for="email">Email</label>
                     <span class="helper-text" data-error="Please input a valid email address." data-success="Good!"></span>
                 </div>
 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">mode_edit</i>
-                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix2">Message</label>
+                    <textarea id="messagetext" name="messagetext" class="materialize-textarea"></textarea>
+                    <label for="messagetext">Message</label>
                 </div>
 
                 <br />
@@ -48,7 +48,10 @@
                         Submit
                         <i class="material-icons right">send</i>
                     </button>
-                    <a href="#" class="waves-effect waves-light btn grey"> <i class="material-icons right">cancel</i>Cancel </a>
+                    <button id="message-cancel" class="btn red lighten-2 waves-effect waves-light" type="reset" name="action">
+                        Cancel
+                        <i class="material-icons right">cancel</i>
+                    </button>
                 </div>
             </div>
         </form>
