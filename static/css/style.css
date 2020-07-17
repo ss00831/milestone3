@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway:wght@500;600&display=swap');
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+ html,body{
+     font-family: 'Raleway', sans-serif;
+     overflow-x: hidden;
+}
+
+/* --------------- base.html ---------- */
+.indexh3{
+    margin-left: 0.5rem;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+
+/* --------------- navbar ---------- */
+nav .brand-logo {
+    margin-left: 0.5rem;
+}
+
+/* --------------- recipes.html ---------- */
+.add-recipe{
+    margin-left: 0.703125rem;
+}
+
+.card-image img{
+    height: 12rem;
+}
+
+.card .card-content{
+    padding: 0.75rem 1.5rem;
+    height: 7.65625rem;
+}
+
+
+.card .card-content .card-title > strong{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.card .card-content > p{
+    color: #014a0d
+}
+
+.card .card-action{
+    font-weight: 700;
+    
+    
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+    color: #1a0b54;
+}
+
+figure{
+    width:auto;
+    overflow:hidden;
+    margin:0;
+}
+figure img{
+    display:block;
+    width:100%;
+    margin:-20% 0 -20% 0;
+}
+
+
+.responsive-img .single-recipe img{
+    max-height: 20rem;
+    width: auto;
+}
+
+/* --------------- aboutus.html ---------- */
+.small-title{
+    font-weight: 600;
+}
+.noodle-info > p, .message-form{
+    padding: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.noodle-info{
+    padding: 2rem;
+    background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100% ), url("../images/info_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 33rem;
+}
+
+.aboutus{
+    padding: 2rem;
+    background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100% ), url("../images/e-mail_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 33rem;
+}
+
+
+/* --------------- footer ---------- */
+footer {
+    margin-top: 50px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+.social {
+    text-align: center;
+}
+
+.list-inline > li {
+    display: inline;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.list-inline-item {
+    padding: 5px 10px 0px 10px;
+    font-size: 35px;
+}
+.list-inline-item a {
+    color: #040036;
+}
+
+
+
+@media screen and (max-width: 992.02px) {
+    .noodle-info, .aboutus{
+        height: auto;
+        margin-bottom: 4rem;
+    }
+}

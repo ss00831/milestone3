@@ -1,0 +1,42 @@
+{% extends 'base.html'%} {% block content %}
+
+<div class="row">
+<h3 class="indexh3">About us</h3>
+  <a
+    href="{{url_for('add_recipe')}}"
+    class="btn waves-effect waves-light add-recipe"
+    type="submit"
+    name="action"
+    >Add Recipe
+    <i class="material-icons right">playlist_add</i>
+  </a>
+</div>
+<div class="row">
+  <ul>
+    {% for recipe in recipes %}
+    <div class="col s12 m6 l3">
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}"><img
+            class="responsive-img recipe-image"
+            src="{{recipe.photo_url}}"
+            alt="xxx"
+          /></a>
+        </div>
+        <div class="card-content">
+          <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}"><span class="card-title activator grey-text text-darken-4"><strong>{{recipe.recipe_name}}</strong></span></a>
+          <p>{{recipe.nationality}}</p>
+        </div>
+        <div class="card-action">
+          <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}">Open the recipe</a>
+        </div>
+      </div>
+      <!--<p>{{recipe.portions}}</p>
+          <p>{{recipe.ingredients}}</p>
+            <p>{{recipe.instructions}}</p>-->
+    </div>
+
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

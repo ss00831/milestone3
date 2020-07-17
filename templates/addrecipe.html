@@ -1,0 +1,83 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Add Recipe</h3>
+<div class="row">
+    <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">restaurant_menu</i>
+                    <input id="recipe_name" name="recipe_name" type="text" class="validate" />
+                    <label>Recipe Name</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">language</i>
+                    <input id="nationality" name="nationality" type="text" class="validate" />
+                    <label>Nationality</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">person</i>
+                    <input id="portions" name="portions" type="text" class="validate" />
+                    <label>Portions</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12 input_fields_wrap">
+                    <i class="material-icons prefix">format_list_bulleted</i>
+                    <label>Ingredients</label>
+                    <button class="add_field_button"><i class="material-icons prefix">add_circle_outline</i></button>
+                    <input class="ingredient validate" name="ingredient_name_1" type="text" />
+                    <button class="add_field_button"><i class="material-icons prefix">add_circle_outline</i></button>
+                    <input class="ingredient validate" name="ingredient_name_2" type="text" />
+                    <button class="add_field_button"><i class="material-icons prefix">add_circle_outline</i></button>
+                    <input class="ingredient validate" name="ingredient_name_3" type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">assignment</i>
+                    <label>Instructions</label>
+                    <button class="add_field_button"><i class="material-icons prefix">add_circle_outline</i></button>
+                    <input class="instructions validate" name="instructions_name_1" type="text" />
+                    <button class="add_field_button"><i class="material-icons prefix">add_circle_outline</i></button>
+                    <input class="instructions validate" name="instructions_name_2" type="text" />
+                    <button class="add_field_button"><i class="material-icons prefix">add_circle_outline</i></button>
+                    <input class="instructions validate" name="instructions_name_3" type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">add_a_photo</i>
+                    <input id="photo_url" name="photo_url" type="text" class="validate" />
+                    <label>Photo url</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">lock</i>
+                    <input id="del_password" name="del_password" type="password" placeholder="for modification and deletion" class="validate" />
+                    <label>Password</label>
+                </div>
+            </div>
+
+            <div class="row center">
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                    Add Recipe
+                    <i class="material-icons right">playlist_add</i>
+                </button>
+                <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn grey"> <i class="material-icons right">cancel</i>Cancel </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
