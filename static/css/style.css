@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Raleway:wght@500;600&display=swap');
+
 body {
     display: flex;
     min-height: 100vh;
@@ -14,16 +15,41 @@ body {
      overflow-x: hidden;
 }
 
+button{
+    font-family: 'Raleway', sans-serif;
+}
+
 /* --------------- base.html ---------- */
 .indexh3{
     margin-left: 0.5rem;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Lato', sans-serif;
 }
 
 
 /* --------------- navbar ---------- */
+nav {
+    margin-bottom: 1rem;
+}
 nav .brand-logo {
     margin-left: 0.5rem;
+    color: black;
+    font-weight:bold;
+}
+
+nav .nav-wrapper > ul > li > a {
+    color: #040036;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* --------------- index.html ---------- */
+.welcome-message {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem;
 }
 
 /* --------------- recipes.html ---------- */
@@ -47,13 +73,11 @@ nav .brand-logo {
 }
 
 .card .card-content > p{
-    color: #014a0d
+    color: #014a0d;
 }
 
 .card .card-action{
     font-weight: 700;
-    
-    
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
@@ -68,13 +92,18 @@ figure{
 figure img{
     display:block;
     width:100%;
-    margin:-20% 0 -20% 0;
+    margin:-15% 0 -15% 0;
 }
 
 
 .responsive-img .single-recipe img{
     max-height: 20rem;
     width: auto;
+}
+
+
+.add_recipe_form{
+    margin: 2rem;
 }
 
 /* --------------- aboutus.html ---------- */
@@ -89,7 +118,7 @@ figure img{
 
 .noodle-info{
     padding: 2rem;
-    background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100% ), url("../images/info_background.jpg");
+    background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100% ), url("../images/info_background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 33rem;
@@ -97,20 +126,30 @@ figure img{
 
 .aboutus{
     padding: 2rem;
-    background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100% ), url("../images/e-mail_background.png");
+    background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.7) 100% ), url("../images/e-mail_background.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     height: 33rem;
 }
 
+#message_button{
+    display: none;
+}
 
-/* --------------- footer ---------- */
 footer {
     margin-top: 50px;
     padding: 5px;
     text-align: center;
     width: 100%;
+    display: block;
+}
+.page-footer{
+    position: relative;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: white;
 }
 .social {
     text-align: center;
@@ -130,11 +169,35 @@ footer {
     color: #040036;
 }
 
+@media screen and (max-width: 1140.02px) {
+    /* --------------- recipes.html : card-title ---------- */
+    .card-title > strong{
+        font-size: 1.25rem;
+    }
+}
 
 
 @media screen and (max-width: 992.02px) {
+    .index-preview > .card-image img{
+        height: 18rem;
+    }
+
+    .recipes-preview > .card-image img{
+        height: 18rem;
+    }
     .noodle-info, .aboutus{
         height: auto;
         margin-bottom: 4rem;
+    }
+    #message_button{
+        display:inline-block;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 600.02px) {
+    .recipes-preview > .card-image img{
+        height: 18rem;
     }
 }

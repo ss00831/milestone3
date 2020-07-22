@@ -1,16 +1,23 @@
 {% extends 'base.html'%} {% block content %}
 <div class="row">
-    <div>
-        <h3 class="indexh3">Welcome</h3>
+    <div class="welcome-section">
+        
         <figure>
             <img id="indeximg" class="responsive-img" src="static/images/indeximg.jpg" alt="indeximg.jpg" />
         </figure>
+        <div class="welcome-message">
+            <p>
+                <h3 class="indexh3">Welcome to Noodle World!</h3><br>
+
+                Let's share noodle and pasta recipes :)
+            </p>
+        </div>
     </div>
 
     <ul>
         {% for recipe in recipes[:4] %}
         <div class="col s12 m6 l3">
-            <div class="card">
+            <div class="card light-green lighten-5 index-preview">
                 <div class="card-image waves-effect waves-block waves-light">
                     <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}"><img class="responsive-img" src="{{recipe.photo_url}}" alt="xxx" /></a>
                 </div>

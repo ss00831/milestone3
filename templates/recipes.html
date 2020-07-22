@@ -1,10 +1,10 @@
 {% extends 'base.html'%} {% block content %}
 
 <div class="row">
-<h3 class="indexh3">About us</h3>
+<h3 class="indexh3">Recipes</h3>
   <a
     href="{{url_for('add_recipe')}}"
-    class="btn waves-effect waves-light add-recipe"
+    class="btn waves-effect waves-light add-recipe green darken-2"
     type="submit"
     name="action"
     >Add Recipe
@@ -15,7 +15,7 @@
   <ul>
     {% for recipe in recipes %}
     <div class="col s12 m6 l3">
-      <div class="card">
+      <div class="card light-green lighten-5 recipes-preview">
         <div class="card-image waves-effect waves-block waves-light">
           <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}"><img
             class="responsive-img recipe-image"
@@ -31,9 +31,6 @@
           <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}">Open the recipe</a>
         </div>
       </div>
-      <!--<p>{{recipe.portions}}</p>
-          <p>{{recipe.ingredients}}</p>
-            <p>{{recipe.instructions}}</p>-->
     </div>
 
     {% endfor %}

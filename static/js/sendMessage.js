@@ -23,6 +23,3 @@ function sendMail(contactForm) {
         );
     return false; // To block from loading a new page
 }
-
-$('#message-cancel').val('');
-$('#message-cancel').next().removeClass('active');
