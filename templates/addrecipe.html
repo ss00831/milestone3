@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">restaurant_menu</i>
-                    <input id="recipe_name" name="recipe_name" type="text" class="validate" />
+                    <input id="recipe_name" name="recipe_name" type="text" class="validate" required>
                     <label>Recipe Name</label>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">person</i>
-                    <input id="portions" name="portions" type="text" class="validate" />
+                    <input id="portions" name="portions" type="number" class="validate" required>
                     <label>Portions</label>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <div class="input-field col s12 input_fields_ingredient">
                     <i class="material-icons prefix">format_list_bulleted</i>
                     <label>Ingredients</label><br />
-                    <input class="ingredient validate" name="ingredient_name_0" type="text" />
+                    <input class="ingredient validate" name="ingredient_name_0" type="text" required/>
                 </div>
                 <a class="add_ingredient_field_button"><i class="material-icons prefix">add</i> Add a field</a>
             </div>
@@ -40,7 +40,7 @@
                 <div class="input-field col s12 input_fields_instruction">
                     <i class="material-icons prefix">assignment</i>
                     <label>Instructions</label><br />
-                    <input class="instructions validate" name="instructions_name_0" type="text" />
+                    <input class="instructions validate" name="instructions_name_0" type="text" required/>
                 </div>
                 <a class="add_instruction_field_button"><i class="material-icons prefix">add</i> Add a field</a>
             </div>
@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
-                    <input id="del_password" name="del_password" type="password" placeholder="for modification and deletion" class="validate" />
+                    <input id="del_password" name="del_password" type="password" class="validate" required/>
                     <label>Password</label>
                 </div>
             </div>

@@ -34,7 +34,7 @@ $(document).ready(function () {
       x++; //text box increment
       name = "ingredient_name_" + x;
       $(input_ingredient).append(
-        '<a class="remove_field_button">Del</a><input class="ingredient validate" name=' +
+        '<a class="remove_field_button">Remove</a><input class="ingredient validate" name=' +
           name +
           ' type="text" />'
       ); //add input box
@@ -52,7 +52,7 @@ $(document).ready(function () {
       x1++; //text box increment
       name = "ingredient_name_" + x1;
       $(input_ingredient_edit).append(
-        '<a class="remove_field_button">Del</a><input class="ingredient validate" name=' +
+        '<a class="remove_field_button">Remove</a><input class="ingredient validate" name=' +
           name +
           ' type="text" />'
       ); //add input box
@@ -69,7 +69,7 @@ $(document).ready(function () {
       y++; //text box increment
       name = "instructions_name_" + y;
       $(input_instruction).append(
-        '<a class="remove_field_button">Del</a><input class="instructions validate" name=' +
+        '<a class="remove_field_button">Remove</a><input class="instructions validate" name=' +
           name +
           ' type="text" />'
       ); //add input box
@@ -87,7 +87,7 @@ $(document).ready(function () {
       y1++; //text box increment
       name = "instructions_name_" + y1;
       $(input_instruction_edit).append(
-        '<a class="remove_field_button">Del</a><input class="instructions validate" name=' +
+        '<a class="remove_field_button">Remove</a><input class="instructions validate" name=' +
           name +
           ' type="text" />'
       ); //add input box
@@ -137,4 +137,9 @@ function imgError(image) {
     return true;
 }
 
-//var input_pass1 = document.getElementById('delete_password').value;
+$(document).ready(function () {
+    var input_pass = document.getElementById('delete_password').value;
+    
+});
+
+

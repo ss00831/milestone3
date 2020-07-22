@@ -2,7 +2,6 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-
 if os.path.exists("env.py"):
     import env
 
@@ -11,6 +10,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.getenv("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 mongo = PyMongo(app)
 
@@ -92,7 +92,7 @@ def update_recipe(recipe_id):
     ingredient_dict = [ingredient for ingredient in request.form.keys() 
                        if "ingredient_name_" in ingredient]
     instruction_dict = [instruction for instruction in request.form.keys()
-                       if "instructions_name_" in instruction]
+                        if "instructions_name_" in instruction]
     ingredient = []
     instruction = []
     for ingre in ingredient_dict:
