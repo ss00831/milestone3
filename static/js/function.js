@@ -1,11 +1,7 @@
 $(document).ready(function () {
   $(".sidenav").sidenav();
-  $(".slider").slider({ fullwidth: true });
-  $(".carousel").carousel();
-  $(".collapsible").collapsible();
   $(".modal").modal();
-  $(".scrollspy").scrollSpy();
-  $("select").formSelect();
+  $('select').formSelect();
 });
 
 // Add/Remove Input Fields Dynamically with jQuery :
