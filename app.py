@@ -42,17 +42,28 @@ def add_recipe():
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
-    recipes.insert_one(
+    
+    ingredient_dict = [ingredient for ingredient in request.form.keys() 
+                       if "ingredient_name_" in ingredient]
+    instruction_dict = [instruction for instruction in request.form.keys() 
+                       if "instructions_name_" in instruction]
+    ingredient = []
+    instruction = []
+    for ingre in ingredient_dict:
+        ingredient.append(request.form[ingre])
+    for instr in instruction_dict:
+        instruction.append(request.form[instr])
+    recipes.insert_one( 
     {
         'recipe_name': request.form.get('recipe_name'),
         'nationality': request.form.get('nationality'),
         'portions': request.form.get('portions'),
-        'ingredients': [],
-        #request.form.get('ingredient_name_1')
-        'instructions': [request.form.get('instructions_name_1'),request.form.get('instructions_name_2'),request.form.get('instructions_name_3')],
+        'ingredients': ingredient,
+        'instructions': instruction,
         'photo_url': request.form.get('photo_url'),
-        'del_password': request.form.get('del_password')    
+        'del_password': request.form.get('del_password')
     })
+    
     return redirect(url_for('get_recipes'))
 
 
@@ -65,19 +76,35 @@ def get_singlerecipe(recipe_id):
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("editrecipe.html", recipe=the_recipe)
+    len_ingredient = range(0, len(the_recipe['ingredients']))
+    len_instruction = range(0, len(the_recipe['instructions']))
+    return render_template("editrecipe.html", 
+                           recipe=the_recipe, 
+                           recipe_id=the_recipe['_id'],
+                           len_ingredient=len_ingredient,
+                           len_instruction=len_instruction)
 
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
+    ingredient_dict = [ingredient for ingredient in request.form.keys() 
+                       if "ingredient_name_" in ingredient]
+    instruction_dict = [instruction for instruction in request.form.keys()
+                       if "instructions_name_" in instruction]
+    ingredient = []
+    instruction = []
+    for ingre in ingredient_dict:
+        ingredient.append(request.form[ingre])
+    for instr in instruction_dict:
+        instruction.append(request.form[instr])
     recipes.update({'_id': ObjectId(recipe_id)}, 
     {
         'recipe_name': request.form.get('recipe_name'),
         'nationality': request.form.get('nationality'),
         'portions': request.form.get('portions'),
-        'ingredients': [request.form.get('ingredient_name_1'),request.form.get('ingredient_name_2'),request.form.get('ingredient_name_3')],
-        'instructions': [request.form.get('instructions_name_1'),request.form.get('instructions_name_2'),request.form.get('instructions_name_3')],
+        'ingredients': ingredient,
+        'instructions': instruction,
         'photo_url': request.form.get('photo_url'),
         'del_password': request.form.get('del_password')
     })        

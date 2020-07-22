@@ -57,6 +57,10 @@ nav .nav-wrapper > ul > li > a {
     margin-left: 0.703125rem;
 }
 
+.add_field_button{
+    margin-left: 2rem;
+}
+
 .card-image img{
     height: 12rem;
 }
@@ -96,13 +100,20 @@ figure img{
 }
 
 
+
+
+ul.ingredient-list>li{
+    list-style-type: square;
+    margin-left: 2rem;
+}
+
 .responsive-img .single-recipe img{
     max-height: 20rem;
     width: auto;
 }
 
 
-.add_recipe_form{
+.add_recipe_form, .edit_recipe_form{
     margin: 2rem;
 }
 

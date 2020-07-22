@@ -18,9 +18,9 @@
       <div class="card light-green lighten-5 recipes-preview">
         <div class="card-image waves-effect waves-block waves-light">
           <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}"><img
-            class="responsive-img recipe-image"
+            class="responsive-img recipe-image" id="single-recipe-img"
             src="{{recipe.photo_url}}"
-            alt="xxx"
+            alt="No image"
           /></a>
         </div>
         <div class="card-content">
