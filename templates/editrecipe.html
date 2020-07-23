@@ -1,29 +1,45 @@
 {% extends 'base.html' %} {% block content %}
-<h3>Edit Recipe</h3>
+<h3 class="indexh3">Edit Recipe</h3>
 <div class="row edit_recipe_form">
     <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">restaurant_menu</i>
-                    <input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}" />
+                    <input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}" required/>
                     <label>Recipe Name</label>
+                    <span class="helper-text" data-error="Please input a recipe name."></span>
                 </div>
             </div>
 
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s12 m4">
                     <i class="material-icons prefix">language</i>
                     <input id="nationality" name="nationality" type="text" class="validate" value="{{recipe.nationality}}" />
                     <label>Nationality</label>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
+            
+                <div class="input-field col s12 m4">
                     <i class="material-icons prefix">person</i>
-                    <input id="portions" name="portions" type="text" class="validate" value="{{recipe.portions}}" />
+                    <input id="portions" name="portions" type="number" class="validate" value="{{recipe.portions}}" required/>
                     <label>Portions</label>
+                    <span class="helper-text" data-error="Please input only numbers."></span>
+                </div>
+
+                <div class="input-field col s12 m4">
+                    <i class="material-icons prefix">tune</i>
+                    <select id="difficulty" name="difficulty" class="validate" required>
+                        <option value="" disabled>Please select difficulty.</option>
+                        {% for diff in difficulty %}
+                            {% if diff.difficulty == recipe.difficulty %}
+                                <option value="{{diff.difficulty}}" selected>{{diff.difficulty}}</option>
+                            {% else %}
+                                <option value="{{diff.difficulty}}" >{{diff.difficulty}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <label>Difficulty</label>
+                    <span class="helper-text" data-error="Please select a difficulty."></span>
                 </div>
             </div>
 
@@ -37,6 +53,7 @@
                         {% endif %}
                         <input class="ingredient validate" name="ingredient_name_{{a}}" type="text" value="{{recipe.ingredients[a]}}" />
                     {% endfor %}
+                    <span class="helper-text" data-error="At least an ingredient is required."></span>
                 </div>
                 <a class="add_ingredient_field_button_edit"><i class="material-icons prefix">add</i> Add a field</a>
             </div>
@@ -51,6 +68,7 @@
                         {% endif %}
                         <input class="instructions validate" name="instructions_name_{{a}}" type="text" value="{{recipe.instructions[a]}}" />
                     {% endfor %}
+                    <span class="helper-text" data-error="At least an instruction is required."></span>
                 </div>
                 <a class="add_instruction_field_button_edit"><i class="material-icons prefix">add</i> Add a field</a>
             </div>
@@ -66,7 +84,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
-                    <input id="del_password" name="del_password" type="password" class="validate" value="{{recipe.del_password}}" />
+                    <input id="del_password" name="del_password" type="password" class="validate" value="{{recipe.del_password}}" required/>
                     <label>Password for deletion</label>
                 </div>
             </div>

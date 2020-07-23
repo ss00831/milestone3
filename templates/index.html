@@ -13,9 +13,9 @@
             </p>
         </div>
     </div>
-
+    <h4>latest recipes</h4>
     <ul>
-        {% for recipe in recipes[:4] %}
+        {% for recipe in (recipes | reverse)[:4]  %}
         <div class="col s12 m6 l3">
             <div class="card light-green lighten-5 index-preview">
                 <div class="card-image waves-effect waves-block waves-light">

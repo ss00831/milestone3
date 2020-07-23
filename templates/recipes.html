@@ -12,8 +12,7 @@
   </a>
 </div>
 <div class="row">
-  <ul>
-    {% for recipe in recipes %}
+    {% for recipe in recipes | reverse %}
     <div class="col s12 m6 l3">
       <div class="card light-green lighten-5 recipes-preview">
         <div class="card-image waves-effect waves-block waves-light">
@@ -34,6 +33,6 @@
     </div>
 
     {% endfor %}
-  </ul>
+  
 </div>
 {% endblock %}

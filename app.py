@@ -37,7 +37,8 @@ def get_info():
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("addrecipe.html", 
-                           recipes=mongo.db.recipes.find())
+                           recipes=mongo.db.recipes.find(),
+                           difficulty=mongo.db.difficulty.find())
 
 
 @app.route('/insert_recipe', methods=['POST'])
@@ -47,7 +48,7 @@ def insert_recipe():
     ingredient_dict = [ingredient for ingredient in request.form.keys() 
                        if "ingredient_name_" in ingredient]
     instruction_dict = [instruction for instruction in request.form.keys() 
-                       if "instructions_name_" in instruction]
+                        if "instructions_name_" in instruction]
     ingredient = []
     instruction = []
     for ingre in ingredient_dict:
@@ -59,6 +60,7 @@ def insert_recipe():
         'recipe_name': request.form.get('recipe_name'),
         'nationality': request.form.get('nationality'),
         'portions': request.form.get('portions'),
+        'difficulty': request.form.get('difficulty'),
         'ingredients': ingredient,
         'instructions': instruction,
         'photo_url': request.form.get('photo_url'),
@@ -77,11 +79,13 @@ def get_singlerecipe(recipe_id):
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_difficulty = mongo.db.difficulty.find()
     len_ingredient = range(0, len(the_recipe['ingredients']))
     len_instruction = range(0, len(the_recipe['instructions']))
     return render_template("editrecipe.html", 
                            recipe=the_recipe, 
                            recipe_id=the_recipe['_id'],
+                           difficulty=all_difficulty,
                            len_ingredient=len_ingredient,
                            len_instruction=len_instruction)
 
@@ -104,6 +108,7 @@ def update_recipe(recipe_id):
         'recipe_name': request.form.get('recipe_name'),
         'nationality': request.form.get('nationality'),
         'portions': request.form.get('portions'),
+        'difficulty': request.form.get('difficulty'),
         'ingredients': ingredient,
         'instructions': instruction,
         'photo_url': request.form.get('photo_url'),
@@ -117,6 +122,14 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})    
     return redirect(url_for('get_recipes'))
     
+
+"""
+@app.route('/get_difficulty')
+def get_difficulty():
+    return render_template('difficulty.html',
+                           difficulty=mongo.db.difficulty.find())
+"""
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
