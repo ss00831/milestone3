@@ -1,28 +1,28 @@
 {% extends 'base.html' %} {% block content %}
 <h3 class="indexh3">Add Recipe</h3>
 <div class="row add_recipe_form">
-    <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+    <form action="{{ url_for('insert_recipe') }}" method="POST" >
         <div class="row">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">restaurant_menu</i>
-                    <input id="recipe_name" name="recipe_name" type="text" class="validate" required />
+                    <input id="recipe_name" name="recipe_name" placeholder="Please input the recipe name." type="text" class="validate" required />
                     <label>Recipe Name</label>
-                    <span class="helper-text" data-error="Please input a recipe name."></span>
+                    <span class="helper-text" data-error="Don't forget to input the recipe name."></span>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12 m4">
                     <i class="material-icons prefix">language</i>
-                    <input id="nationality" name="nationality" type="text" class="validate" required />
+                    <input id="nationality" name="nationality" placeholder="Please input the nationality." type="text" class="validate" required />
                     <label>Nationality</label>
                     <span class="helper-text" data-error="If you don't know the nationality, pleast write &quot;OTHER&quot;."></span>
                 </div>
             
                 <div class="input-field col s12 m4">
                     <i class="material-icons prefix">person</i>
-                    <input id="portions" name="portions" type="number" class="validate" required />
+                    <input id="portions" name="portions" placeholder="Please input the portions." type="number" class="validate" required />
                     <label>Portions</label>
                     <span class="helper-text" data-error="Please input only numbers."></span>
                 </div>
@@ -43,8 +43,8 @@
                 <div class="input-field col s12 input_fields_ingredient">
                     <i class="material-icons prefix">format_list_bulleted</i>
                     <label>Ingredients</label><br />
-                    <input class="ingredient validate" name="ingredient_name_0" type="text" required/>
-                    <span class="helper-text" data-error="At least an ingredient is required."></span>
+                    <input class="ingredient validate" name="ingredient_name_0" placeholder="Please input the ingredient." type="text" required/>
+                    <span class="helper-text" data-error="At least one field is required."></span>
                 </div>
                 <a class="add_ingredient_field_button waves-effect waves-light btn-small green darken-1"><i class="material-icons left">add</i>Add field</a>
                 
@@ -54,8 +54,8 @@
                 <div class="input-field col s12 input_fields_instruction">
                     <i class="material-icons prefix">assignment</i>
                     <label>Instructions</label><br />
-                    <input class="instructions validate" name="instructions_name_0" type="text" required/>
-                    <span class="helper-text" data-error="At least an instruction is required."></span>
+                    <input class="instructions validate" name="instructions_name_0" placeholder="Please input the instruction." type="text" required/>
+                    <span class="helper-text" data-error="At least one field is required."></span>
                 </div>
                 <a class="add_instruction_field_button waves-effect waves-light btn-small green darken-1"><i class="material-icons left">add</i>Add field</a>
             </div>
@@ -63,7 +63,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">add_a_photo</i>
-                    <input id="photo_url" name="photo_url" type="text" class="validate" />
+                    <input id="photo_url" name="photo_url" placeholder="Please input the photo url. If you don't have any url, skip this step." type="text" class="validate" />
                     <label>Photo url</label>
                 </div>
             </div>
@@ -71,8 +71,9 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
-                    <input id="del_password" name="del_password" type="password" class="validate" required/>
+                    <input id="del_password" name="del_password" placeholder="Please input the password of the delete." type="password" class="validate" required/>
                     <label>Password</label>
+                    <span class="helper-text" data-error="Don't forget to input the password of the delete."></span>
                 </div>
             </div>
 

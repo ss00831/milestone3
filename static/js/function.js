@@ -3,6 +3,7 @@ $(document).ready(function () {
   $(".modal").modal();
   $('select').formSelect();
   $("select[required]").css({display: "block", height: 0, padding: 0, width: 0, position: 'absolute'});
+  //M.updateTextFields();
 });
 
 // Add/Remove Input Fields Dynamically with jQuery :
@@ -37,7 +38,7 @@ $(document).ready(function () {
       $(input_ingredient).append(
         '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
           name +
-          ' type="text" required/>'
+          ' placeholder="If you don&apos;t need this field, please remove it." type="text" required/>'
       ); //add input box
     }
   });
@@ -55,7 +56,7 @@ $(document).ready(function () {
       $(input_ingredient_edit).append(
         '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
           name +
-          ' type="text" required/>'
+          ' placeholder="If you don&apos;t need this field, please remove it." type="text" required/>'
       ); //add input box
     }
   });
@@ -72,7 +73,7 @@ $(document).ready(function () {
       $(input_instruction).append(
         '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
           name +
-          ' type="text" required/>'
+          ' placeholder="If you don&apos;t need this field, please remove it." type="text" required/>'
       ); //add input box
     }
   });
@@ -90,7 +91,7 @@ $(document).ready(function () {
       $(input_instruction_edit).append(
         '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
           name +
-          ' type="text" required/>'
+          ' placeholder="If you don&apos;t need this field, please remove it." type="text" required/>'
       ); //add input box
     }
   });
