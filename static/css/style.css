@@ -144,9 +144,9 @@ ol.instruction-list li{
 }
 
 .recipe_list{
-    margin:3rem 8rem 1.5rem 8rem;
-    
+    margin:3rem 8rem 1.5rem 8rem;   
 }
+
 .recipe_list_in{
     padding: 1rem 0;
 }
@@ -240,8 +240,27 @@ footer {
     }
 }
 
+
+@media screen and (max-width: 700.02px) {
+
+    .recipe_list{
+        margin:3rem 1rem 1.5rem 1rem;   
+    }
+}
 @media screen and (max-width: 600.02px) {
     .recipes-preview > .card-image img{
         height: 18rem;
+    }
+    .ingredient-list, .instruction-list{
+        margin: 0 0.4rem;
+    }
+    .instruction-list{
+        margin-right: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 400.02px) {
+    nav .brand-logo {
+        font-size: 1.6rem;
     }
 }

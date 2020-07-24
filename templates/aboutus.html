@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <div class="row">
-    <h3 class="indexh3">About us</h3>
+    <h3 class="indexh3">Contact us</h3>
     <a href="#aboutus" id="message_button" class="waves-effect waves-light btn light-green darken-3">
               go to message form
             </a>
@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">format_list_bulleted</i>
-                    <select id="subject" name="subject">
+                    <select id="subject" name="subject" required>
                         <option value="" disabled selected>Please select a type of subject.</option>
                         <option value="General">General</option>
                         <option value="Password and recipe data">Password and recipe data</option>
@@ -28,27 +28,29 @@
 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="sender_name" name="sender_name" type="text" class="validate" />
+                    <input id="sender_name" name="sender_name" type="text" class="validate" required />
                     <label for="sender_name">Name</label>
+                    <span class="helper-text" data-error="Please input a name."></span>
                 </div>
 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">email</i>
-                    <input id="email" name="email" type="email" class="validate" />
+                    <input id="email" name="email" type="email" class="validate" required />
                     <label for="email">Email</label>
                     <span class="helper-text" data-error="Please input a valid email address." data-success="Good!"></span>
                 </div>
 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">mode_edit</i>
-                    <textarea id="messagetext" name="messagetext" class="materialize-textarea"></textarea>
+                    <textarea id="messagetext" name="messagetext" class="materialize-textarea" required></textarea>
                     <label for="messagetext">Message</label>
+                    <span class="helper-text" data-error="Please write your message."></span>
                 </div>
 
                 <br />
                 <div id="send-button-group" class="center">
                     <button class="btn waves-effect waves-light green darken-2" type="submit" name="action">
-                        Submit
+                        Send
                         <i class="material-icons right">send</i>
                     </button>
                     <button class="btn waves-effect waves-light red lighten-2 " type="reset" name="action">

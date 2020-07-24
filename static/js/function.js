@@ -2,6 +2,7 @@ $(document).ready(function () {
   $(".sidenav").sidenav();
   $(".modal").modal();
   $('select').formSelect();
+  $("select[required]").css({display: "block", height: 0, padding: 0, width: 0, position: 'absolute'});
 });
 
 // Add/Remove Input Fields Dynamically with jQuery :
@@ -34,9 +35,9 @@ $(document).ready(function () {
       x++; //text box increment
       name = "ingredient_name_" + x;
       $(input_ingredient).append(
-        '<a class="remove_field_button">Remove</a><input class="ingredient validate" name=' +
+        '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
           name +
-          ' type="text" />'
+          ' type="text" required/>'
       ); //add input box
     }
   });
@@ -52,9 +53,9 @@ $(document).ready(function () {
       x1++; //text box increment
       name = "ingredient_name_" + x1;
       $(input_ingredient_edit).append(
-        '<a class="remove_field_button">Remove</a><input class="ingredient validate" name=' +
+        '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
           name +
-          ' type="text" />'
+          ' type="text" required/>'
       ); //add input box
     }
   });
@@ -69,9 +70,9 @@ $(document).ready(function () {
       y++; //text box increment
       name = "instructions_name_" + y;
       $(input_instruction).append(
-        '<a class="remove_field_button">Remove</a><input class="instructions validate" name=' +
+        '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
           name +
-          ' type="text" />'
+          ' type="text" required/>'
       ); //add input box
     }
   });
@@ -87,9 +88,9 @@ $(document).ready(function () {
       y1++; //text box increment
       name = "instructions_name_" + y1;
       $(input_instruction_edit).append(
-        '<a class="remove_field_button">Remove</a><input class="instructions validate" name=' +
+        '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
           name +
-          ' type="text" />'
+          ' type="text" required/>'
       ); //add input box
     }
   });
@@ -131,15 +132,10 @@ $(document).ready(function () {
   });
 });
 
-function imgError(image) {
-    image.onerror = "";
-    image.src = "static/images/alternative_img_for_recipe.png";
-    return true;
-}
-
+/*
 $(document).ready(function () {
     var input_pass = document.getElementById('delete_password').value;
     
-});
+});*/
 
 

@@ -123,15 +123,8 @@ def delete_recipe(recipe_id):
     return redirect(url_for('get_recipes'))
     
 
-"""
-@app.route('/get_difficulty')
-def get_difficulty():
-    return render_template('difficulty.html',
-                           difficulty=mongo.db.difficulty.find())
-"""
-
-
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=False)
+            debug=True)
+            

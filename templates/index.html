@@ -19,7 +19,7 @@
         <div class="col s12 m6 l3">
             <div class="card light-green lighten-5 index-preview">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}"><img class="responsive-img" src="{{recipe.photo_url}}" alt="xxx" /></a>
+                    <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}"><img class="responsive-img" src="{{recipe.photo_url}}" alt="No image" onerror="this.src='../static/images/alternative_img_for_recipe.png';"/></a>
                 </div>
                 <div class="card-content">
                     <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}">

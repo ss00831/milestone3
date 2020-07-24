@@ -15,8 +15,9 @@
             <div class="row">
                 <div class="input-field col s12 m4">
                     <i class="material-icons prefix">language</i>
-                    <input id="nationality" name="nationality" type="text" class="validate" value="{{recipe.nationality}}" />
+                    <input id="nationality" name="nationality" type="text" class="validate" value="{{recipe.nationality}}" required/>
                     <label>Nationality</label>
+                    <span class="helper-text" data-error="If you don't know the nationality, pleast write &quot;OTHER&quot;."></span>
                 </div>
             
                 <div class="input-field col s12 m4">
@@ -49,13 +50,13 @@
                     <label>Ingredients</label><br />
                     {% for a in len_ingredient %} 
                         {% if a > 0 %}
-                            <a class="remove_field_button">Del</a>
+                            <a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a>
                         {% endif %}
                         <input class="ingredient validate" name="ingredient_name_{{a}}" type="text" value="{{recipe.ingredients[a]}}" />
                     {% endfor %}
                     <span class="helper-text" data-error="At least an ingredient is required."></span>
                 </div>
-                <a class="add_ingredient_field_button_edit"><i class="material-icons prefix">add</i> Add a field</a>
+                <a class="add_ingredient_field_button_edit waves-effect waves-light btn-small green darken-1"><i class="material-icons left">add</i>Add field</a>
             </div>
 
             <div class="row">
@@ -64,13 +65,13 @@
                     <label>Instructions</label>
                     {% for a in len_instruction %} 
                         {% if a > 0 %}
-                            <a class="remove_field_button">Del</a>
+                            <a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a>
                         {% endif %}
                         <input class="instructions validate" name="instructions_name_{{a}}" type="text" value="{{recipe.instructions[a]}}" />
                     {% endfor %}
                     <span class="helper-text" data-error="At least an instruction is required."></span>
                 </div>
-                <a class="add_instruction_field_button_edit"><i class="material-icons prefix">add</i> Add a field</a>
+                <a class="add_instruction_field_button_edit waves-effect waves-light btn-small green darken-1"><i class="material-icons left">add</i>Add field</a>
             </div>
 
             <div class="row">

@@ -2,29 +2,28 @@
 <div class="row">
   <h3 class="indexh3">{{recipe.recipe_name}}</h3>
 
-  <ul>
     <div class="col s12">
       <div class="center single-recipe-img">
         
-        <img class="responsive-img" id="single-recipe-img" src="{{recipe.photo_url}}" onerror="this.src='static/images/alternative_img_for_recipe.png'"/>
+        <img class="responsive-img" id="single-recipe-img" src="{{recipe.photo_url}}" alt="No image" onerror="this.src='../static/images/alternative_img_for_recipe.png';"/>
         
       </div>
     </div>
 
     <div class="row recipe_list">
-    <div class="col s12 m4 amber lighten-2">
+    <div class="col s4 amber lighten-2">
       <div class="center recipe_list_in">
         <i class="medium material-icons prefix">language</i><h6>Nationality</h6><p class="recipe_list_content">{{recipe.nationality}}</p>
       </div>
     </div>
 
-    <div class="col s12 m4 yellow lighten-3">
+    <div class="col s4 yellow lighten-3">
       <div class="center recipe_list_in">
         <i class="medium material-icons prefix">person</i><h6>Portions</h6><p class="recipe_list_content">{{recipe.portions}}</p>
       </div>
     </div>
     
-    <div class="col s12 m4 lime lighten-3">
+    <div class="col s4 lime lighten-3">
       <div class="center recipe_list_in">
         <i class="medium material-icons prefix">tune</i><h6>Difficulty</h6><p class="recipe_list_content">{{recipe.difficulty}}</p>
       </div>
@@ -48,7 +47,6 @@
       <li>{{instruction}}</li>
       {% endfor %}</ol>
     </div>
-  </ul>
 </div>
 
 <div class="center button-group-1">
