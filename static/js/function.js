@@ -3,7 +3,6 @@ $(document).ready(function () {
   $(".modal").modal();
   $('select').formSelect();
   $("select[required]").css({display: "block", height: 0, padding: 0, width: 0, position: 'absolute'});
-  //M.updateTextFields();
 });
 
 // Add/Remove Input Fields Dynamically with jQuery :
@@ -132,11 +131,3 @@ $(document).ready(function () {
     y1--;
   });
 });
-
-/*
-$(document).ready(function () {
-    var input_pass = document.getElementById('delete_password').value;
-    
-});*/
-
-
