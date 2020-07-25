@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from bs4 import BeautifulSoup
 if os.path.exists("env.py"):
     import env
 
@@ -117,10 +118,30 @@ def update_recipe(recipe_id):
     return redirect(url_for('get_recipes'))
 
 
+@app.route('/take_password/<recipe_id>', methods=['POST'])
+def take_password(recipe_id):
+    return (request.form['delete_password'])
+
+
 @app.route('/delete_recipe/<recipe_id>')
-def delete_recipe(recipe_id):
-    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+def delete_recipe(recipe_id):    
+    recipes = mongo.db.recipes
+    recipes.delete_one({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
+
+    """
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    del_password = the_recipe['del_password']
+    if del_password == take_password(recipe_id):
+        recipes.delete_one({'_id': ObjectId(recipe_id)})
+        print("YES")
+        return redirect(url_for('get_recipes'))
+    else:
+        print("NO")
+        print(del_password)
+        print(take_password(recipe_id))
+        return redirect(url_for('get_recipes'))
+    """
 
 
 if __name__ == '__main__':
