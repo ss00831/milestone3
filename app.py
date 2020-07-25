@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, url_for, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 if os.path.exists("env.py"):
@@ -117,31 +117,29 @@ def update_recipe(recipe_id):
     return redirect(url_for('get_recipes'))
 
 
-@app.route('/take_password/<recipe_id>', methods=['POST'])
-def take_password(recipe_id):
-    return (request.form['delete_password'])
-
-
-@app.route('/delete_recipe/<recipe_id>')
-def delete_recipe(recipe_id):    
-    recipes = mongo.db.recipes
+@app.route('/delete_recipe/<recipe_id>',  methods=['POST'])
+def delete_recipe(recipe_id):
+    
+    """
     recipes.delete_one({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
 
-    """
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     del_password = the_recipe['del_password']
-    if del_password == take_password(recipe_id):
-        recipes.delete_one({'_id': ObjectId(recipe_id)})
+    """
+
+    del_recipe_id = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    input_password = request.values.get("input_password")
+    
+    if del_recipe_id["del_password"] == input_password:
         print("YES")
         return redirect(url_for('get_recipes'))
     else:
         print("NO")
-        print(del_password)
-        print(take_password(recipe_id))
+        print(del_recipe_id["del_password"])
+        print(input_password)
         return redirect(url_for('get_recipes'))
-    """
-
+    
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

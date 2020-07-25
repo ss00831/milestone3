@@ -3,18 +3,19 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 ## UX 
 
-### Preview (*)
+### Preview
 - Desktop 
 
-![desktop_index](https://user-images.githubusercontent.com/53374745/83000187-4f5f8a80-a00a-11ea-9d7e-843b032e8a75.JPG)
+![MS_Capture_desktop](https://user-images.githubusercontent.com/53374745/88457662-8de9b800-ce88-11ea-9c50-5c635bcbfe5f.jpg)
 
 - Tablet 
 
-![table_index](https://user-images.githubusercontent.com/53374745/83000543-ceed5980-a00a-11ea-9f7b-cb38a5cebc03.JPG)
+![MS_Capture_tablet](https://user-images.githubusercontent.com/53374745/88457670-9a6e1080-ce88-11ea-9f77-a94a91ccacf5.jpg)
 
 - Mobile 
 
-![mobile_index](https://user-images.githubusercontent.com/53374745/83000558-d280e080-a00a-11ea-9a63-223b1409a356.jpg)
+![MS_Capture_mobile](https://user-images.githubusercontent.com/53374745/88457664-8fb37b80-ce88-11ea-8259-ca105d38e06f.jpg)
+
 
 ### User scenario
 1. An external user wants to see noodles recipes.
@@ -115,30 +116,70 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 ## Deployment
 
-### My Milestone2 page address : Heroku blah~~~~
+### My Milestone2 page address : https://noodleworld-ms3.herokuapp.com/
 
-### To deploy this page to GitHub Pages from its GitHub repository (https://github.com/ss00831/milestone2) :
-1. From the menu items near the top of the page, select [Settings].
-2. Scroll down to the [GitHub Pages] section.
-3. [Source] - click the drop-down menu labelled None - select [Master Branch].
-4. The page will automatically be refreshed, and the website is deployed.
- (If this step is failed, refresh the settings page and try again the "step 3".)
-5. If the deployment is succeeded, you can see a message as "Your site is published at https://ss00831.github.io/milestone2/". Try to retrieve the link to the deployed website.
+### To deploy this page to GitHub Pages from its GitHub repository (https://github.com/ss00831/milestone3) :
+1. Create "requirements.txt" file
+```
+pip3 freeze > requirements.txt
+```
+2. Create "Procfile" file
+```
+echo web: python3 app.py > Procfile
+```
+3. Login heroku
+4. Setting Config Vars 
+: Heroku homepage - Select "noodleworld-ms3" project - Setting - Click "Reveal Config Vars" - Create Config Vars as below and save
+![heroku_setting](https://user-images.githubusercontent.com/53374745/88460288-62bc9400-ce9b-11ea-895b-32e483e55d29.JPG)
+
+* You can find the ["MONGO_URI"] value as below
+: Login MongoDB - Select your cluster - click "CONNECT" button - click "Connect your application" - Select your driver and version - Copy the url - Paste in the env.py file
++) The url example: "mongodb+srv://root:xxxx@myfirstcluster-xxxxx.mongodb.net/COLLECTIONNAME?retryWrites=true&w=majority".
+5. Deploy to Heroku
+: git add . -> git commit -m "commit comment" -> git remote -v -> git push -u heroku master
+6. To scale dynos 
+```
+heroku ps:scale web=1 to 
+```
+7. Run the webpage: Click "Open app" button on the Heroku dashboard page or write https://noodleworld-ms3.herokuapp.com/ on your web browser.
 
 ### How to run this project locally
 
 To clone this project from GitHub :
-1. Click [Clone or download] on the repository page.
-2. In the "Clone with HTTPS" section, click the copy button (next of the address) and copy the clone URL for the repository.
+1. Click [Code] - [Download ZIP] on the repository page.
+2. Unzip the milestone3-master.zip file.
 3. Open Git Bash on your local IDE.
 4. (Optional) Change the current working directory to the location where you want the cloned directory to be made.
-5. Type "git clone", and then paste the URL you copied in Step 3.
+5. Move to the milestone3-master folder
+6. Install the requirement files as below.
 ```
-git clone https://github.com/ss00831/milestone2.git
+pip3 install -r requirements.txt
 ```
-6. Press Enter and check the directory where you located on Step 4.
+* If you need, update pip.
+```
+python -m pip install --upgrade pip
+```
+7. Make "env.py" file and write as below in the file.
+```
+import os
 
+os.environ["SECRET_KEY"] = "YOUR_SECRET_KEY"
+os.environ["MONGO_DBNAME"] = "MONGO_DB_COLLECTION_NAME"
+os.environ["MONGO_URI"] = "your_mongodb_url"
+```
 
+* You can find the ["MONGO_URI"] value as below
+: Login MongoDB - Select your cluster - click "CONNECT" button - click "Connect your application" - Select your driver and version - Copy the url - Paste in the env.py file
++) The url example : "mongodb+srv://root:xxxx@myfirstcluster-xxxxx.mongodb.net/COLLECTIONNAME?retryWrites=true&w=majority".
+
+8. Execute the command as below for running app.py. 
+```
+flask run
+```
+9. Open a web browser and write this address as below.
+```
+http://127.0.0.1:5000/
+```
 ## Credits
 
 ### Content
