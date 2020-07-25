@@ -4,15 +4,10 @@
         <figure>
             <img id="indeximg" class="responsive-img" src="static/images/indeximg.jpg" alt="indeximg.jpg" />
         </figure>
-        <div class="welcome-message light-green lighten-5">
-            <h4>Welcome to Noodle World!</h4>
-            <br />
-            <p>
-                Let's share noodle and pasta recipes :)
-            </p>
-        </div>
+        
+        <h4>latest recipes</h4>
+        <a href="{{url_for('get_recipes')}}" class="amber darken-4 waves-effect waves-light btn"><i class="material-icons left">more</i> see more recipes</a>
     </div>
-    <h4>latest recipes</h4>
     <ul>
         {% for recipe in (recipes | reverse)[:4] %}
         <div class="col s12 m6 l3">
@@ -22,7 +17,7 @@
                 </div>
                 <div class="card-content">
                     <a href="{{url_for('get_singlerecipe', recipe_id=recipe._id)}}">
-                        <span class="card-title activator grey-text text-darken-4"><strong>{{recipe.recipe_name}}</strong></span>
+                        <span class="card-title activator grey-text text-darken-4">{{recipe.recipe_name}}</span>
                     </a>
                     <p>{{recipe.nationality}}</p>
                 </div>
