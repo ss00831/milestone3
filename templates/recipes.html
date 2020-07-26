@@ -1,5 +1,4 @@
 {% extends 'base.html'%} {% block content %}
-
 <div class="row">
     <h3 class="indexh3">Recipes</h3>
     <a href="{{url_for('add_recipe')}}" class="btn waves-effect waves-light add-recipe green darken-2">
@@ -8,6 +7,7 @@
     </a>
 </div>
 <div class="row">
+    <!-- Loop backwards using template : https://stackoverflow.com/questions/12680691/loop-backwards-using-django-template -->
     {% for recipe in recipes | reverse %}
     <div class="col s12 m6 l3">
         <div class="card light-green lighten-5 recipes-preview">
@@ -27,7 +27,6 @@
             </div>
         </div>
     </div>
-
     {% endfor %}
 </div>
 {% endblock %}

@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 <div class="row">
     <h3 class="indexh3">{{recipe.recipe_name}}</h3>
-
     <div class="col s12">
         <div class="center single-recipe-img">
+            <!-- Use an alt image for img HTML tags : https://coderwall.com/p/hxauyq/use-an-alt-image-for-img-html-tags -->
             <img class="responsive-img" id="single-recipe-img" src="{{recipe.photo_url}}" alt="No image" onerror="this.src='../static/images/alternative_img_for_recipe.png';" />
         </div>
     </div>
@@ -43,7 +43,7 @@
             {% endfor %}
         </ul>
     </div>
-    
+
     <div class="col s12 m6">
         <h5 class="center">Instructions</h5>
         <br />
@@ -77,15 +77,14 @@
                     </div>
                 </div>
                 <div id="send-button-group2" class="center">
-                    <!--<a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="red lighten-1 waves-effect waves-light btn btn_small"> <i class="material-icons right">delete_forever</i>Delete </a>-->
                     <button class="red lighten-1 btn waves-effect waves-light" type="submit" name="action">
-                        <i class="material-icons left">delete_forever</i>Delete 
+                        <i class="material-icons left">delete_forever</i>Delete
                     </button>
-                    <a href="{{ url_for('get_singlerecipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn grey modal-close"> <i class="material-icons left">cancel</i>Cancel </a>
+                    <a href="{{ url_for('get_singlerecipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn grey modal-close">
+                        <i class="material-icons left">cancel</i>Cancel
+                    </a>
                 </div>
             </form>
-                
-            
         </div>
     </div>
     {% endblock %}

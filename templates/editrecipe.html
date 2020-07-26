@@ -17,7 +17,7 @@
                     <i class="material-icons prefix">language</i>
                     <input id="nationality" name="nationality" placeholder="Please input the nationality." type="text" class="validate" value="{{recipe.nationality}}" required />
                     <label>Nationality</label>
-                    <span class="helper-text" data-error='If you don&apos;t know the nationality, pleast write "OTHER".'></span>
+                    <span class="helper-text" data-error="If you don&apos;t know the nationality, pleast write &quot;OTHER&quot;."></span>
                 </div>
 
                 <div class="input-field col s12 m4">
@@ -45,13 +45,16 @@
                 <div class="input-field col s12 input_fields_ingredient_edit">
                     <i class="material-icons prefix">format_list_bulleted</i>
                     <label>Ingredients</label><br />
-                    {% for a in len_ingredient %} {% if a > 0 %}
-                    <a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a>
-                    {% endif %} {% if a == 0 %}
-                    <input class="ingredient validate" name="ingredient_name_{{a}}" placeholder="Please input the ingredient." type="text" value="{{recipe.ingredients[a]}}" required />
-                    {% else %}
-                    <input class="ingredient validate" name="ingredient_name_{{a}}" placeholder="If you don't need this field, please remove it." type="text" value="{{recipe.ingredients[a]}}" required />
-                    {% endif %} {% endfor %}
+                    {% for a in len_ingredient %} 
+                        {% if a > 0 %}
+                            <a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a>
+                        {% endif %} 
+                        {% if a == 0 %}
+                            <input class="ingredient validate" name="ingredient_name_{{a}}" placeholder="Please input the ingredient." type="text" value="{{recipe.ingredients[a]}}" required />
+                        {% else %}
+                            <input class="ingredient validate" name="ingredient_name_{{a}}" placeholder="If you don't need this field, please remove it." type="text" value="{{recipe.ingredients[a]}}" required />
+                        {% endif %} 
+                    {% endfor %}
                     <span class="helper-text" data-error="At least one field is required."></span>
                 </div>
                 <a class="add_ingredient_field_button_edit waves-effect waves-light btn-small green darken-1"><i class="material-icons left">add</i>Add field</a>
@@ -61,13 +64,18 @@
                 <div class="input-field col s12 input_fields_instruction_edit">
                     <i class="material-icons prefix">assignment</i>
                     <label>Instructions</label>
-                    {% for a in len_instruction %} {% if a > 0 %}
-                    <a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a>
-                    {% endif %} {% if a == 0 %}
-                    <input class="instructions validate" name="instructions_name_{{a}}" placeholder="Please input the ingredient." type="text" value="{{recipe.instructions[a]}}" required />
-                    {% else %}
-                    <input class="instructions validate" name="instructions_name_{{a}}" placeholder="If you don't need this field, please remove it." type="text" value="{{recipe.instructions[a]}}" required />
-                    {% endif %} {% endfor %}
+                    {% for a in len_instruction %} 
+                        {% if a > 0 %}
+                        <a class="remove_field_button red lighten-1 waves-effect waves-light btn-small">
+                            <i class="material-icons left">remove_circle_outline</i>Remove
+                        </a>
+                        {% endif %} 
+                        {% if a == 0 %}
+                            <input class="instructions validate" name="instructions_name_{{a}}" placeholder="Please input the ingredient." type="text" value="{{recipe.instructions[a]}}" required />
+                        {% else %}
+                            <input class="instructions validate" name="instructions_name_{{a}}" placeholder="If you don't need this field, please remove it." type="text" value="{{recipe.instructions[a]}}" required />
+                        {% endif %} 
+                    {% endfor %}
                     <span class="helper-text" data-error="At least one field is required."></span>
                 </div>
                 <a class="add_instruction_field_button_edit waves-effect waves-light btn-small green darken-1"><i class="material-icons left">add</i>Add field</a>

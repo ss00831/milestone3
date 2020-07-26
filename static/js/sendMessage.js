@@ -4,7 +4,6 @@
     emailjs.init("user_GSvvZT0J6KvBUXPodOVCh");
 })();
 
-
 function sendMail(contactForm) {
     emailjs
         .send("gmail", "milestone3-20200717", {

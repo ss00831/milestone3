@@ -3,22 +3,23 @@ $(document).ready(function () {
   $(".sidenav").sidenav();
   $(".modal").modal();
   $('select').formSelect();
+  // How to validate select option for a Materialize dropdown?
+  //: https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown
   $("select[required]").css({display: "block", height: 0, padding: 0, width: 0, position: 'absolute'});
 });
 
 // Add/Remove Input Fields Dynamically with jQuery :
 // https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery
-
 $(document).ready(function () {
   let max_fields = 100; //maximum input boxes allowed
-  let input_ingredient = $(".input_fields_ingredient"); //Fields wrapper
-  let input_instruction = $(".input_fields_instruction"); //Fields wrapper
-  let input_ingredient_edit = $(".input_fields_ingredient_edit"); //Fields wrapper
-  let input_instruction_edit = $(".input_fields_instruction_edit"); //Fields wrapper
-  let add_ingredient_button = $(".add_ingredient_field_button"); //Add button ID
-  let add_instruction_button = $(".add_instruction_field_button"); //Add button ID
-  let add_ingredient_button_edit = $(".add_ingredient_field_button_edit"); //Add button ID
-  let add_instruction_button_edit = $(".add_instruction_field_button_edit"); //Add button ID
+  let input_ingredient = $(".input_fields_ingredient"); //Fields wrapper for ingredient in addrecipe.html
+  let input_instruction = $(".input_fields_instruction"); //Fields wrapper for instruction in addrecipe.html
+  let input_ingredient_edit = $(".input_fields_ingredient_edit"); //Fields wrapper for ingredient in editrecipe.html
+  let input_instruction_edit = $(".input_fields_instruction_edit"); //Fields wrapper for instruction in editrecipe.html
+  let add_ingredient_button = $(".add_ingredient_field_button"); //Add ingredient field button class in addrecipe.html
+  let add_instruction_button = $(".add_instruction_field_button"); //Add instruction field button class in addrecipe.html
+  let add_ingredient_button_edit = $(".add_ingredient_field_button_edit"); //Add ingredient field button class in editrecipe.html
+  let add_instruction_button_edit = $(".add_instruction_field_button_edit"); //Add instruction field button class in editrecipe.html
 
   let x = 0; //initlal text box count for add page of ingredients
   let y = 0; //initlal text box count for add page of instruction

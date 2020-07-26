@@ -29,10 +29,10 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 5. An external user can send a message.
  - Use EmailJS 
 
-### Mockup (*)
-- [Desktop](https://github.com/ss00831/milestone2/files/4668180/ms2.pdf)
-- [Tablet](https://github.com/ss00831/milestone2/files/4668179/ms2.-.tablet.pdf)
-- [Mobile](https://github.com/ss00831/milestone2/files/4668178/ms2.-.mobile.pdf)
+### Mockup
+- [ms3-tablet.pdf](https://github.com/ss00831/milestone3/files/4977466/ms3-tablet.pdf)
+- [ms3-desktop.pdf](https://github.com/ss00831/milestone3/files/4977467/ms3-desktop.pdf)
+- [ms3-mobile.pdf](https://github.com/ss00831/milestone3/files/4977468/ms3-mobile.pdf)
 
 
 ## Features
@@ -85,8 +85,8 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 1. Code validation
 - html (https://validator.w3.org/, Validate by URI) : No error
 - CSS (https://jigsaw.w3.org/css-validator/, Validate by direct input) : No error
-- JS (https://jshint.com/) : 11 warnings
-- Python (http://pep8online.com/) : x error
+- JS (https://jshint.com/) : 19 warnings
+- Python (http://pep8online.com/) : No error
 
 2. Usability Test
 - All functional test cases (26 items) : Pass
@@ -190,7 +190,9 @@ http://127.0.0.1:5000/
 
 2. Short information background : https://pixabay.com/sv/photos/pasta-nudlar-livsmedel-k%C3%B6k-549108/
 
-3. e-mail icon background: https://www.netclipart.com/down/wThTii_e-mail-png-free-download-transparent-background-emails/
+3. E-mail icon background: https://www.netclipart.com/down/wThTii_e-mail-png-free-download-transparent-background-emails/
+
+4. Alternative image for recipe : https://icon-icons.com/download/124121/PNG/512/
 
 ### Acknowledgements
 
@@ -200,3 +202,15 @@ http://127.0.0.1:5000/
  - https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery
 3. How TO - Position Text Over an Image 
  - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_text
+4. Use an alt image for img HTML tags 
+ - https://coderwall.com/p/hxauyq/use-an-alt-image-for-img-html-tags
+5. Check if a given key already exists in a dictionary
+ - https://stackoverflow.com/questions/1602934/check-if-a-given-key-already-exists-in-a-dictionary
+6. How to append existing array in existing collection in mongodb using java with new values
+ - https://stackoverflow.com/questions/31956696/how-to-append-existing-array-in-existing-collection-in-mongodb-using-java-with-n
+7. loop backwards using template 
+ - https://stackoverflow.com/questions/12680691/loop-backwards-using-django-template
+8. materialize grid s12 not working in mobile view 
+ - https://stackoverflow.com/questions/42891630/materialize-grid-s12-not-working-in-mobile-view/42912833
+9. How to validate select option for a Materialize dropdown?
+ - https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown

@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h3 class="indexh3">Add Recipe</h3>
 <div class="row add_recipe_form">
-    <form action="{{ url_for('insert_recipe') }}" method="POST" >
+    <form action="{{ url_for('insert_recipe') }}" method="POST">
         <div class="row">
             <div class="row">
                 <div class="input-field col s12">
@@ -17,7 +17,7 @@
                     <i class="material-icons prefix">language</i>
                     <input id="nationality" name="nationality" placeholder="Please input the nationality." type="text" class="validate" required />
                     <label>Nationality</label>
-                    <span class="helper-text" data-error='If you don&apos;t know the nationality, pleast write "OTHER".'></span>
+                    <span class="helper-text" data-error="If you don&apos;t know the nationality, pleast write &quot;OTHER&quot;."></span>
                 </div>
 
                 <div class="input-field col s12 m4">
@@ -32,7 +32,7 @@
                     <select id="difficulty" name="difficulty" class="validate" required>
                         <option value="" disabled selected>Please select difficulty.</option>
                         {% for diff in difficulty %}
-                        <option value="{{diff.difficulty}}">{{diff.difficulty}}</option>
+                            <option value="{{diff.difficulty}}">{{diff.difficulty}}</option>
                         {% endfor %}
                     </select>
                     <label>Difficulty</label>

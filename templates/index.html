@@ -4,11 +4,12 @@
         <figure>
             <img id="indeximg" class="responsive-img" src="static/images/indeximg.jpg" alt="indeximg.jpg" />
         </figure>
-        
+
         <h4>latest recipes</h4>
         <a href="{{url_for('get_recipes')}}" class="amber darken-4 waves-effect waves-light btn"><i class="material-icons left">more</i> see more recipes</a>
     </div>
     <div>
+        <!-- Loop backwards using template : https://stackoverflow.com/questions/12680691/loop-backwards-using-django-template -->
         {% for recipe in (recipes | reverse)[:4] %}
         <div class="col s12 m6 l3">
             <div class="card light-green lighten-5 index-preview">
