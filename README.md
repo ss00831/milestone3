@@ -139,7 +139,7 @@ echo web: python3 app.py > Procfile
 : git add . -> git commit -m "commit comment" -> git remote -v -> git push -u heroku master
 6. To scale dynos 
 ```
-heroku ps:scale web=1 to 
+heroku ps:scale web=1 
 ```
 7. Run the webpage: Click "Open app" button on the Heroku dashboard page or write https://noodleworld-ms3.herokuapp.com/ on your web browser.
 

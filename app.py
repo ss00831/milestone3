@@ -66,7 +66,6 @@ def insert_recipe():
             'photo_url': request.form.get('photo_url'),
             'del_password': request.form.get('del_password')
         })
-
     return redirect(url_for('get_recipes'))
 
 
@@ -117,27 +116,22 @@ def update_recipe(recipe_id):
     return redirect(url_for('get_recipes'))
 
 
-@app.route('/delete_recipe/<recipe_id>',  methods=['POST'])
+@app.route('/delete_recipe/<recipe_id>', methods=['POST'])
 def delete_recipe(recipe_id):
-    
-    """
-    recipes.delete_one({'_id': ObjectId(recipe_id)})
-    return redirect(url_for('get_recipes'))
-
-    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    del_password = the_recipe['del_password']
-    """
-
     del_recipe_id = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     input_password = request.values.get("input_password")
     
     if del_recipe_id["del_password"] == input_password:
         print("YES")
+        mongo.db.recipes.delete_one({'_id': ObjectId(recipe_id)})
         return redirect(url_for('get_recipes'))
     else:
+        """
         print("NO")
         print(del_recipe_id["del_password"])
         print(input_password)
+        """
+        print("NO")
         return redirect(url_for('get_recipes'))
     
 

@@ -1,57 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Paytone+One&family=Raleway:ital,wght@0,500;0,600;0,800;1,700&display=swap');
- body {
-     display: flex;
-     min-height: 100vh;
-     flex-direction: column;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
- html,body{
+
+html, body{
      font-family: 'Raleway', sans-serif;
      overflow-x: hidden;
 }
- button{
-     font-family: 'Raleway', sans-serif;
+
+button{
+    font-family: 'Raleway', sans-serif;
 }
-/* --------------- base.html ---------- */
- .indexh3{
+
+/* ---------------for h3 tags on every page ---------- */
+.indexh3{
      margin-left: 0.5rem;
      font-family: 'Lato', sans-serif;
      font-style: italic;
      font-weight: 700;
 }
+
 /* --------------- navbar ---------- */
- nav {
-     margin-bottom: 1rem;
-     
-     
+nav {
+    margin-bottom: 1rem;
+        
 }
- nav .brand-logo {
-     margin-left: 0.5rem;
-     color: black;
-     font-size: 2.5rem;
-     text-transform: capitalize;
-     font-family: 'Paytone One', sans-serif;
+nav .brand-logo {
+    margin-left: 0.5rem;
+    color: black;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-family: 'Paytone One', sans-serif;
 }
 
-
- nav .nav-wrapper > ul > li > a, #mobile-demo {
-     color: #040036;
-     font-size: 1.3rem;
-     text-transform: uppercase;
+nav .nav-wrapper > ul > li > a, #mobile-demo {
+    color: #040036;
+    font-size: 1.3rem;
+    text-transform: uppercase;
 }
-/* --------------- index.html ---------- */
+
+/* --------------- index.html : /get_index ---------- */
 .welcome-section{
     text-transform: capitalize;
-    
 }
+
 .welcome-section a, i{
     font-size:1.125rem;
 }
 
-
 .welcome-section a{
     margin-left: 1rem;
 }
-
 
 .welcome-section h4{
     margin-left: 1rem;
@@ -60,195 +61,238 @@
     font-weight: 700;
 }
 
-/* --------------- recipes.html ---------- */
- .add-recipe{
-     margin-left: 0.703125rem;
+figure{
+    width:auto;
+    overflow:hidden;
+    margin:0;
 }
- .add_field_button{
-     margin-left: 2rem;
+
+figure img{
+    display:block;
+    width:100%;
+    margin:-15% 0 -15% 0;
 }
- .card-image img{
-     height: 12rem;
+
+/* --------------- recipes.html : /get_recipes  ---------- */
+.add-recipe{
+    margin-left: 0.703125rem;
 }
- .card .card-content{
-     padding: 0.75rem 1.5rem;
-     height: 7.65625rem;
+
+.add_field_button{
+    margin-left: 2rem;
 }
- .card .card-content > p{
-     color: #014a0d;
+
+/* ---------card images : index.html (/get_index) & recipes.html (/get_recipes)   ---------- */
+.card-image img{
+    height: 12rem;
 }
- .card .card-action{
-     font-weight: 700;
+
+.card .card-content{
+    padding: 0.75rem 1.5rem;
+    height: 7.65625rem;
 }
- .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
-     color: #1a0b54;
+
+.card .card-content > p{
+   color: #014a0d;
 }
- figure{
-     width:auto;
-     overflow:hidden;
-     margin:0;
+
+.card .card-action{
+    font-weight: 700;
 }
- figure img{
-     display:block;
-     width:100%;
-     margin:-15% 0 -15% 0;
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+    color: #1a0b54;
 }
- ul.ingredient-list>li{
-     list-style-type: square;
-     margin-left: 2rem;
+
+/* --------------- singlerecipe.html : /get_recipes/<recipe_id>  ---------- */
+ul.ingredient-list>li{
+    list-style-type: square;
+    margin-left: 2rem;
 }
- ul.ingredient-list li{
-     font-size: 1.1rem;
-     margin-bottom: 0.75rem;
+
+ul.ingredient-list li{
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
 }
- .ingredient-list{
-     margin: 0 1rem;
+
+.ingredient-list{
+    margin: 0 1rem;
 }
- .instruction-list{
-     margin: 0 1rem;
-     font-size: 1rem;
+
+.instruction-list{
+    margin: 0 1rem;
+    font-size: 1rem;
 }
- ol.instruction-list li{
-     font-size: 1.25rem;
-     margin-bottom: 0.75rem;
+
+ol.instruction-list li{
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
 }
- .recipe_list_content{
-     font-size: 1.25rem;
-     font-weight: 800;
-     color: #40008f;
+
+.recipe_list_content{
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #40008f;
 }
- .button-group-1{
-     margin-top: 3rem;
+
+.button-group-1{
+    margin-top: 3rem;
 }
- .single-recipe-img > img{
-     max-height: 30rem;
-     width: auto;
+ 
+.single-recipe-img > img{
+    max-height: 30rem;
+    width: auto;
 }
- .add_recipe_form, .edit_recipe_form{
-     margin: 2rem;
+
+.recipe_list{
+    margin:3rem 8rem 1.5rem 8rem;
 }
- .recipe_list{
-     margin:3rem 8rem 1.5rem 8rem;
+
+.recipe_list_in{
+    padding: 1rem 0;
 }
- .recipe_list_in{
-     padding: 1rem 0;
+
+/* --------- addrecipe.html (/add_recipe) & editrecipe.html (/edit_recipe/<recipe_id>)   ---------- */
+.add_recipe_form, .edit_recipe_form{
+    margin: 2rem;
 }
+
 /* --------------- aboutus.html ---------- */
- .small-title{
-     font-weight: 600;
+.small-title{
+    font-weight: 600;
 }
- .noodle-info > p, .message-form{
-     padding: 1.5rem;
-     font-size: 1.125rem;
-     font-weight: 500;
+
+.noodle-info > p, .message-form{
+    padding: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
 }
- .noodle-info{
-     padding: 2rem;
-     background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100% ), url("../images/info_background.jpg");
-     background-repeat: no-repeat;
-     background-size: cover;
-     height: 33rem;
+
+.noodle-info{
+    padding: 2rem;
+    background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100% ), url("../images/info_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 33rem;
 }
- .aboutus{
-     padding: 2rem;
-     background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.7) 100% ), url("../images/e-mail_background.png");
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     height: 33rem;
+
+.contactus{
+    padding: 2rem;
+    background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.7) 100% ), url("../images/e-mail_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 33rem;
 }
- #message_button{
-     display: none;
+
+#message_button{
+    display: none;
 }
- footer {
-     margin-top: 50px;
-     padding: 5px;
-     text-align: center;
-     width: 100%;
-     display: block;
+
+/* --------------- footer ---------- */
+footer {
+    margin-top: 50px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    display: block;
 }
- .page-footer{
-     position: relative;
-     bottom:0;
-     left:0;
-     width:100%;
-     background-color: white;
+
+.page-footer{
+    position: relative;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: white;
 }
- .social {
-     text-align: center;
+
+.social {
+    text-align: center;
 }
- .list-inline > li {
-     display: inline;
-     padding-right: 5px;
-     padding-left: 5px;
+
+.list-inline > li {
+    display: inline;
+    padding-right: 5px;
+    padding-left: 5px;
 }
- .list-inline-item {
-     padding: 5px 10px 0px 10px;
-     font-size: 35px;
+
+.list-inline-item {
+    padding: 5px 10px 0px 10px;
+    
 }
- .list-inline-item a {
-     color: #040036;
+
+.list-inline-item a {
+    color: #040036;
+    font-size: 2.25rem;
 }
- @media screen and (max-width: 1140.02px) {
-    /* --------------- recipes.html : card-title ---------- */
-     .card-title > strong{
-         font-size: 1.25rem;
+
+@media screen and (max-width: 1140.02px) {
+    /* --------------- recipes.html : /get_recipes ---------- */
+    .card-title {
+        font-size: 1.25rem;
     }
 }
 
- @media screen and (max-width: 992.02px) {
+@media screen and (max-width: 992.02px) {
+    /* --------------- index.html : /get_index ---------- */
      .index-preview > .card-image img{
          height: 18rem;
     }
      .recipes-preview > .card-image img{
          height: 18rem;
     }
-     .noodle-info, .aboutus{
-         height: auto;
-         margin-bottom: 4rem;
+
+    /* --------------- aboutus.html : / get_info ---------- */
+    .noodle-info, .aboutus{
+        height: auto;
+        margin-bottom: 4rem;
     }
-     #message_button{
-         display:inline-block;
-         margin-left: 1rem;
-         margin-bottom: 1rem;
+    
+    #message_button{
+        display:inline-block;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
-
-
-
- @media screen and (max-width: 700.02px) {
-     .recipe_list{
-         margin:3rem 1rem 1.5rem 1rem;
+@media screen and (max-width: 700.02px) {
+    /* ------ singlerecipe.html : /get_recipes/<recipe_id>  ------ */
+    .recipe_list{
+        margin:3rem 1rem 1.5rem 1rem;
     }
 }
- @media screen and (max-width: 600.02px) {
-     .recipes-preview > .card-image img{
-         height: 18rem;
+ 
+@media screen and (max-width: 600.02px) {
+    /* --------------- index.html : /get_index ---------- */
+    .recipes-preview > .card-image img{
+        height: 18rem;
     }
-     .ingredient-list, .instruction-list{
-         margin: 0 0.4rem;
+    /* ------ singlerecipe.html : /get_recipes/<recipe_id>  ------ */
+    .ingredient-list, .instruction-list{
+        margin: 0 0.4rem;
     }
-     .instruction-list{
-         margin-right: 0.4rem;
+    .instruction-list{
+        margin-right: 0.4rem;
     }
 }
-
 
  @media screen and (max-width: 500.02px) {
-     nav .brand-logo {
-         font-size: 1.9375rem;
+    /* --------------- navbar ---------- */
+    nav .brand-logo {
+        font-size: 1.9375rem;
     } 
- }
+}
 
- @media screen and (max-width: 400.02px) {
-     nav .brand-logo {
-         font-size: 1.75rem;
+@media screen and (max-width: 400.02px) {
+    /* --------------- navbar ---------- */
+    nav .brand-logo {
+        font-size: 1.75rem;
     } 
- }
+}
 
- @media screen and (max-width: 360.02px) {
-     nav .brand-logo {
-         font-size: 1.5rem;
+@media screen and (max-width: 360.02px) {
+    /* --------------- navbar ---------- */
+    nav .brand-logo {
+        font-size: 1.5rem;
     } 
- }
+}
