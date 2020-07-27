@@ -53,6 +53,8 @@
             {% endfor %}
         </ol>
     </div>
+    
+    
 </div>
 
 <div class="center button-group-1">
@@ -60,6 +62,10 @@
 
     <!-- Modal Trigger -->
     <a class="waves-effect waves-light btn modal-trigger red lighten-1" href="#modal2">Delete Recipe</a>
+
+    <div class="goback_recipe center">
+        <a href="{{ url_for('get_recipes') }}">Go back to recipe list</a>
+    </div>
 
     <!-- Modal Structure -->
     <div id="modal2" class="modal">

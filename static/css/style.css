@@ -139,6 +139,10 @@ ol.instruction-list li{
     margin-top: 3rem;
 }
  
+.goback_recipe{
+    margin-top: 2rem;
+}
+
 .single-recipe-img > img{
     max-height: 30rem;
     width: auto;
@@ -152,7 +156,7 @@ ol.instruction-list li{
     padding: 1rem 0;
 }
 
-/* --------- addrecipe.html (/add_recipe) & editrecipe.html (/edit_recipe/<recipe_id>)   ---------- */
+/* ---- addrecipe.html (/add_recipe) & editrecipe.html (/edit_recipe/<recipe_id>) ---- */
 .add_recipe_form, .edit_recipe_form{
     margin: 2rem;
 }
@@ -206,22 +210,13 @@ footer {
     background-color: white;
 }
 
-.social {
-    text-align: center;
-}
-
-.list-inline > li {
+.social-links > li {
     display: inline;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
-.list-inline-item {
-    padding: 5px 10px 0px 10px;
-    
-}
-
-.list-inline-item a {
+.social-links a > i{
     color: #040036;
     font-size: 2.25rem;
 }
@@ -266,6 +261,13 @@ footer {
     /* --------------- index.html : /get_index ---------- */
     .recipes-preview > .card-image img{
         height: 18rem;
+    }
+    /* ---- addrecipe.html (/add_recipe) & editrecipe.html (/edit_recipe/<recipe_id>) ---- */
+    .add_recipe_form, .edit_recipe_form{
+        margin: 0rem;
+    }
+    .add_ingredient_field_button, .add_instruction_field_button, .add_ingredient_field_button_edit, add_instruction_field_button_edit{
+        margin-left: 2rem;
     }
     /* ------ singlerecipe.html : /get_recipes/<recipe_id>  ------ */
     .ingredient-list, .instruction-list{
