@@ -50,8 +50,37 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 - Login function
 
 
-## Information Architecture (*)
- - xxxxxx
+## Information Architecture
+
+### Menu structure
+![menu_structure](https://user-images.githubusercontent.com/53374745/88479081-129e0a00-cf4d-11ea-9eb4-12c8fe5a5187.png)
+
+### Database
+0. The database of this project is based on MongoDB.
+1. Database name : NoodleCollection
+2. Collections
+ - recipes
+
+| Field Name   | Input data type | Data type |
+|--------------|-----------|-----------|
+| _id          | ObjectId  | ObjectId  |
+| recipe_name  | text    | String    |
+| nationality  | text    | String    |
+| portions     | number    | String    |
+| difficulty   | select    | String    |
+| ingredients  | text     | Array    |
+| instructions | text     | Array    |
+| photo_url    | text    | String    |
+| del_password | password    | String    |
+
+ - difficulty : User can not add/edit this collection.
+
+| Field Name | Field Value | Data type |
+|------------|-------------|-----------|
+| difficulty | Difficult   | String    |
+| difficulty | Normal      | String    |
+| difficulty | Easy        | String    |
+
 
 ## Technologies Used
 
@@ -80,7 +109,15 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 0. Device / Browser spec
 - For Usability testing
 
-    ![device_spec](https://user-images.githubusercontent.com/53374745/84033367-06f48500-a999-11ea-847e-a179bb27ce0c.JPG)
+|              |            Device 1            |               Device 2               |     Device 3     |                 Device 4                 |         Device 5        |
+|:------------:|:------------------------------:|:------------------------------------:|:----------------:|:----------------------------------------:|:-----------------------:|
+| Device Model |         Macbook Air 13"        |           Samsung NT900X5W           |   iPhone XS Max  |                iPad Air 2                |    LG V30S (LG-H930)    |
+|      OS      |     macOS Catalina 10.15.3     |      Windows 10 Home 10.0.18362      |    iOS 13.5.1    |                iOS 13.5.1                |        Android 9        |
+|      CPU     | Intel core i5 1.6GHz Dual-Core | Intel core i5-7200 2.50GHz Dual core | Apple A12 Bionic | 1.5GHz tri-core 64-bit ARMv8-A "Typhoon" | Qualcomm Snapdragon 835 |
+|      RAM     |               4GB              |                  8GB                 |        4GB       |                    2GB                   |           6GB           |
+|    Graphic   |     Intel HD Graphics 6000     |         Intel HD Graphics 620        |    APPLE G11P    |              PowerVR GXA6850             |   Qualcomm Adreno 540   |
+|    Browser   |   Safari 13.0.5 (15608.5.11)   |          Chrome 84.0.4147.89         |      Safari      |                  Safari                  |   Chrome 84.0.4147.89   |
+
 
 1. Code validation
 - html (https://validator.w3.org/, Validate by URI) : No error
@@ -98,10 +135,24 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
     1. All links need to work like the Full test 
     1. All images/contents/links must not be broken.
 
-    ![browsertest](https://user-images.githubusercontent.com/53374745/78868081-8b329680-7a42-11ea-9b15-7a15dc172e3f.PNG)
+| Browser\Resolution | >= 992 px | >= 768 px (Tablet size) | >= 600 px | >= 414 px (iPhone Plus) |>= 320 px (iPhone 5/SE)|
+|:-------:|:-------:|:-----------------:|:--:|:--: |:--: |
+| Safari        | Pass       |  Pass    | Pass   | Pass | Pass |
+| Chrome        | Pass       |  Pass    | Pass   | Pass | Pass |
+| Firefox       | Pass       |  Pass    | Pass   | Pass | Pass |
+| Internet Explorer   | Pass       |  Pass    | Pass   | Pass | Pass |
+| Edge          | Pass       |  Pass    | Pass   | Pass | Pass |
+
+
 - For responsive & browser testing
 
-    ![Browser_info](https://user-images.githubusercontent.com/53374745/84033370-0825b200-a999-11ea-9794-02977dbbee79.JPG)
+| Browser | Version | Device Model Name | OS |
+|:-------:|:-------:|:-----------------:|:--:|
+| Safari        | 13.1.2 (15609.3.5.1.3)        |  Macbook Air 13"                 | macOS Catalina 10.15.6   |
+| Chrome        |  84.0.4147.89        |  Samsung NT900X5W                 | Windows 10 Home 10.0.18362   |
+| Firefox        | 78.0.2 (64bits)        |  Samsung NT900X5W                 | Windows 10 Home 10.0.18362   |
+| Internet Explorer        | 11.959.18362.0        | Samsung NT900X5W                  | Windows 10 Home 10.0.18362   |
+| Edge        | 84.0.522.44        | Samsung NT900X5W                  | Windows 10 Home 10.0.18362   |
 
 4. The detailed result : Please refer the test sheet as below.
 - Result: [rev03_testcases_20200605.xlsx](https://github.com/ss00831/milestone2/files/4746075/rev03_testcases_20200605.xlsx)
@@ -214,3 +265,5 @@ http://127.0.0.1:5000/
  - https://stackoverflow.com/questions/42891630/materialize-grid-s12-not-working-in-mobile-view/42912833
 9. How to validate select option for a Materialize dropdown?
  - https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown
+10. Table generator 
+ - https://www.tablesgenerator.com/markdown_tables
