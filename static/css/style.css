@@ -140,6 +140,7 @@ ol.instruction-list li{
 }
  
 .goback_recipe{
+    font-size: 1rem;
     margin-top: 2rem;
 }
 
@@ -266,8 +267,11 @@ footer {
     .add_recipe_form, .edit_recipe_form{
         margin: 0rem;
     }
-    .add_ingredient_field_button, .add_instruction_field_button, .add_ingredient_field_button_edit, add_instruction_field_button_edit{
+    .add_ingredient_field_button, .add_instruction_field_button, .add_ingredient_field_button_edit, .add_instruction_field_button_edit{
         margin-left: 2rem;
+    }
+    .remove_field_button{
+        margin-left: 1rem;
     }
     /* ------ singlerecipe.html : /get_recipes/<recipe_id>  ------ */
     .ingredient-list, .instruction-list{
