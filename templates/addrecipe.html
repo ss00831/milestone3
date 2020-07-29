@@ -1,12 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 <h3 class="indexh3">Add Recipe</h3>
 <div class="row add_recipe_form">
+    <!-- restrict only space in textbox using html pattern
+    : https://stackoverflow.com/questions/48183679/restrict-only-space-in-textbox-using-html-pattern -->
     <form action="{{ url_for('insert_recipe') }}" method="POST">
         <div class="row">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">restaurant_menu</i>
-                    <input id="recipe_name" name="recipe_name" placeholder="Please input the recipe name." type="text" class="validate" required />
+                    <input id="recipe_name" name="recipe_name" placeholder="Please input the recipe name." type="text" pattern="(\s*\S\s*)+" class="validate" required />
                     <label>Recipe Name</label>
                     <span class="helper-text" data-error="Don't forget to input the recipe name."></span>
                 </div>
@@ -15,7 +17,7 @@
             <div class="row">
                 <div class="input-field col s12 m4">
                     <i class="material-icons prefix">language</i>
-                    <input id="nationality" name="nationality" placeholder="Please input the nationality." type="text" class="validate" required />
+                    <input id="nationality" name="nationality" placeholder="Please input the nationality." type="text" pattern="(\s*\S\s*)+" class="validate" required />
                     <label>Nationality</label>
                     <span class="helper-text" data-error="If you don&apos;t know the nationality, pleast write &quot;OTHER&quot;."></span>
                 </div>
@@ -43,7 +45,7 @@
                 <div class="input-field col s12 input_fields_ingredient">
                     <i class="material-icons prefix">format_list_bulleted</i>
                     <label>Ingredients</label><br />
-                    <input class="ingredient validate" name="ingredient_name_0" placeholder="Please input the ingredient." type="text" required />
+                    <input class="ingredient validate" name="ingredient_name_0" placeholder="Please input the ingredient." type="text" pattern="(\s*\S\s*)+" required />
                     <span class="helper-text" data-error="At least one field is required."></span>
                 </div>
                 <a class="add_ingredient_field_button waves-effect waves-light btn-small green darken-1"><i class="material-icons left">add</i>Add ingredient field</a>
@@ -53,7 +55,7 @@
                 <div class="input-field col s12 input_fields_instruction">
                     <i class="material-icons prefix">assignment</i>
                     <label>Instructions</label><br />
-                    <input class="instructions validate" name="instructions_name_0" placeholder="Please input the instruction." type="text" required />
+                    <input class="instructions validate" name="instructions_name_0" placeholder="Please input the instruction." type="text" pattern="(\s*\S\s*)+" required />
                     <span class="helper-text" data-error="At least one field is required."></span>
                 </div>
                 <a class="add_instruction_field_button waves-effect waves-light btn-small green darken-1"><i class="material-icons left">add</i>Add instruction field</a>
@@ -70,7 +72,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
-                    <input id="del_password" name="del_password" placeholder="Please input the password of the delete." type="password" class="validate" required />
+                    <input id="del_password" name="del_password" placeholder="Please input the password of the delete." type="password" pattern="(\s*\S\s*)+" class="validate" required />
                     <label>Password</label>
                     <span class="helper-text" data-error="Don't forget to input the password of the delete."></span>
                 </div>

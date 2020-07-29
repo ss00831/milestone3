@@ -128,8 +128,8 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 - Python (http://pep8online.com/) : No error
 
 2. Usability Test
-- All functional test cases (61 items): Not yet
-- Input data test cases : Preparing...
+- All functional test cases (69 items): Not yet
+- Input data test cases (50 items): Not yet
 
 3. Responsive & Browser Test
 - Pass condition :
@@ -160,7 +160,7 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 - Not yet
 
 ### Testing history (example, modify)
-1. 29 Jul 2020 - Created the test cases for functional
+1. 29 Jul 2020 - Created the test cases for functional, responsive & browser testing
 
 ## Deployment
 

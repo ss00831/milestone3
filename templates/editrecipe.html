@@ -1,12 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 <h3 class="indexh3">Edit Recipe</h3>
 <div class="row edit_recipe_form">
+    <!-- restrict only space in textbox using html pattern
+    : https://stackoverflow.com/questions/48183679/restrict-only-space-in-textbox-using-html-pattern -->
     <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">restaurant_menu</i>
-                    <input id="recipe_name" name="recipe_name" placeholder="Please input the recipe name." type="text" class="validate" value="{{recipe.recipe_name}}" required />
+                    <input id="recipe_name" name="recipe_name" placeholder="Please input the recipe name." type="text" pattern="(\s*\S\s*)+" class="validate" value="{{recipe.recipe_name}}" required />
                     <label>Recipe Name</label>
                     <span class="helper-text" data-error="Don't forget to input the recipe name."></span>
                 </div>
@@ -15,7 +17,7 @@
             <div class="row">
                 <div class="input-field col s12 m4">
                     <i class="material-icons prefix">language</i>
-                    <input id="nationality" name="nationality" placeholder="Please input the nationality." type="text" class="validate" value="{{recipe.nationality}}" required />
+                    <input id="nationality" name="nationality" placeholder="Please input the nationality." type="text" pattern="(\s*\S\s*)+" class="validate" value="{{recipe.nationality}}" required />
                     <label>Nationality</label>
                     <span class="helper-text" data-error="If you don&apos;t know the nationality, pleast write &quot;OTHER&quot;."></span>
                 </div>
@@ -50,9 +52,9 @@
                             <a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a>
                         {% endif %} 
                         {% if a == 0 %}
-                            <input class="ingredient validate" name="ingredient_name_{{a}}" placeholder="Please input the ingredient." type="text" value="{{recipe.ingredients[a]}}" required />
+                            <input class="ingredient validate" name="ingredient_name_{{a}}" placeholder="Please input the ingredient." type="text" pattern="(\s*\S\s*)+" value="{{recipe.ingredients[a]}}" required />
                         {% else %}
-                            <input class="ingredient validate" name="ingredient_name_{{a}}" placeholder="If you don't need this field, please remove it." type="text" value="{{recipe.ingredients[a]}}" required />
+                            <input class="ingredient validate" name="ingredient_name_{{a}}" placeholder="If you don't need this field, please remove it." type="text" pattern="(\s*\S\s*)+" value="{{recipe.ingredients[a]}}" required />
                         {% endif %} 
                     {% endfor %}
                     <span class="helper-text" data-error="At least one field is required."></span>
@@ -71,9 +73,9 @@
                         </a>
                         {% endif %} 
                         {% if a == 0 %}
-                            <input class="instructions validate" name="instructions_name_{{a}}" placeholder="Please input the ingredient." type="text" value="{{recipe.instructions[a]}}" required />
+                            <input class="instructions validate" name="instructions_name_{{a}}" placeholder="Please input the ingredient." type="text" pattern="(\s*\S\s*)+" value="{{recipe.instructions[a]}}" required />
                         {% else %}
-                            <input class="instructions validate" name="instructions_name_{{a}}" placeholder="If you don't need this field, please remove it." type="text" value="{{recipe.instructions[a]}}" required />
+                            <input class="instructions validate" name="instructions_name_{{a}}" placeholder="If you don't need this field, please remove it." type="text" pattern="(\s*\S\s*)+" value="{{recipe.instructions[a]}}" required />
                         {% endif %} 
                     {% endfor %}
                     <span class="helper-text" data-error="At least one field is required."></span>
@@ -92,7 +94,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
-                    <input id="del_password" name="del_password" placeholder="Please input the password of the delete." type="password" class="validate" value="{{recipe.del_password}}" required />
+                    <input id="del_password" name="del_password" placeholder="Please input the password of the delete." type="password" pattern="(\s*\S\s*)+" class="validate" value="{{recipe.del_password}}" required />
                     <label>Password for deletion</label>
                     <span class="helper-text" data-error="Don't forget to input the password of the delete."></span>
                 </div>

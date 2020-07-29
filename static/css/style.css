@@ -274,8 +274,11 @@ footer {
         height: 18rem;
     }
     /* ---- addrecipe.html (/add_recipe) & editrecipe.html (/edit_recipe/<recipe_id>) ---- */
-    .add_recipe_form, .edit_recipe_form{
+    .add_recipe_form{
         margin: 0rem;
+    }
+    .edit_recipe_form{
+        margin-right: 1rem;
     }
     .add_ingredient_field_button, .add_instruction_field_button, .add_ingredient_field_button_edit, .add_instruction_field_button_edit{
         margin-left: 2rem;
