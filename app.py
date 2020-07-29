@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 if os.path.exists("env.py"):
@@ -8,8 +8,8 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 
 """
-- Setting variables for MongoDB. 
-- import env.py  
+- Setting variables for MongoDB.
+- import env.py
 - The variables are also on Heroku config vars.
 """
 app.config["MONGO_DBNAME"] = os.getenv("MONGO_DBNAME")
@@ -21,6 +21,8 @@ mongo = PyMongo(app)
 """
 1. index.html : /get_index
 """
+
+
 @app.route('/')
 @app.route('/get_index')
 def get_index():
@@ -32,17 +34,20 @@ def get_index():
 2. recipes.html : /get_recipes
 - Show all recipes in the recipes collection.
 """
+
+
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("recipes.html",
                            recipes=mongo.db.recipes.find())
 
 
-
 """
 3. aboutus.html : /get_info
 - Show the short noodle story and message form.
 """
+
+
 @app.route('/get_info')
 def get_info():
     return render_template("aboutus.html")
@@ -52,6 +57,8 @@ def get_info():
 4. addrecipe.html : /add_recipe
 - Show add recipe form.
 """
+
+
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("addrecipe.html",
@@ -70,6 +77,8 @@ def add_recipe():
   : https://stackoverflow.com/questions/31956696
   /how-to-append-existing-array-in-existing-collection-in-mongodb-using-java-with-n
 """
+
+
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
@@ -102,6 +111,8 @@ def insert_recipe():
 6. get_singlerecipe.html/<recipe_id> : /get_singlerecipe/<recipe_id>
 - Show the selected recipe.
 """
+
+
 @app.route('/get_singlerecipe/<recipe_id>')
 def get_singlerecipe(recipe_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -110,11 +121,11 @@ def get_singlerecipe(recipe_id):
 
 """
 7. editrecipe.html : /editrecipe
-- Show the input data on the edit recipe form. 
+- Show the input data on the edit recipe form.
 - Get from the input data and show the data on the page.
-
-
 """
+
+
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -140,6 +151,8 @@ def edit_recipe(recipe_id):
   : https://stackoverflow.com/questions/31956696
   /how-to-append-existing-array-in-existing-collection-in-mongodb-using-java-with-n
 """
+
+
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
@@ -170,21 +183,24 @@ def update_recipe(recipe_id):
 """
 9. singlerecipe.html/<recipe_id> : /delete_recipe/<recipe_id>
 - The delete form exists as a modal form in singlerecipe.html.
-- To compare the "del_password" data in the recipes collection and input data on the field of "input_password".
+- To compare the "del_password" data in the recipes collection and
+  input data on the field of "input_password".
  * If the two values are the same, the recipe is removed.
- * If the two values are not the same, the recipe can not be removed.
+ * If the two values are not the same, the recipe can not be removed
+  and shows deletefail.html page.
 """
+
+
 @app.route('/delete_recipe/<recipe_id>', methods=['POST'])
 def delete_recipe(recipe_id):
     del_recipe_id = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     input_password = request.values.get("input_password")
     if del_recipe_id["del_password"] == input_password:
-        print("YES")
         mongo.db.recipes.delete_one({'_id': ObjectId(recipe_id)})
         return redirect(url_for('get_recipes'))
     else:
-        print("NO")
-        return redirect(url_for('get_recipes'))
+        error = 'Delete fail. Try again.'
+        return render_template("deletefail.html", error=error)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

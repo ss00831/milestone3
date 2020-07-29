@@ -1,0 +1,13 @@
+{% extends 'base.html'%} {% block content %}
+<div class="delete-fail center">
+    <div>
+    {% if error %}
+        <p class=error><strong>Error:</strong> {{ error }}
+    {% endif %}
+    </div>
+    
+    <button class="btn waves-effect waves-light orange darken-2" onclick="history.back(-1);">
+        Back to the recipe<i class="material-icons left">replay</i>
+    </button>
+</div>
+{% endblock %}

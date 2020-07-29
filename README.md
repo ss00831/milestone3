@@ -122,12 +122,14 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 1. Code validation
 - html (https://validator.w3.org/, Validate by URI) : No error
 - CSS (https://jigsaw.w3.org/css-validator/, Validate by direct input) : No error
-- JS (https://jshint.com/) : 19 warnings
+- JS (https://jshint.com/) 
+ * function.js: 19 warnings
+ * sendMessage.js: No error and warning.
 - Python (http://pep8online.com/) : No error
 
 2. Usability Test
-- All functional test cases (26 items) : Pass
-- All data test cases (real-time date - 2 items, input data - 6 items) : Pass
+- All functional test cases (61 items): Not yet
+- Input data test cases : Preparing...
 
 3. Responsive & Browser Test
 - Pass condition :
@@ -155,15 +157,10 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 | Edge        | 84.0.522.44        | Samsung NT900X5W                  | Windows 10 Home 10.0.18362   |
 
 4. The detailed result : Please refer the test sheet as below.
-- Result: [rev03_testcases_20200605.xlsx](https://github.com/ss00831/milestone2/files/4746075/rev03_testcases_20200605.xlsx)
-
-5. The past test results
-- xx Jul 2020: [rev02_testcases_20200602.xlsx](https://github.com/ss00831/milestone2/files/4717157/rev02_testcases_20200602.xlsx)
-
+- Not yet
 
 ### Testing history (example, modify)
-1. 27 Jul 2020 - Usability Testing
-2. 02 Aug 2020 - Usability Testing / Responsive & Browser Test
+1. 29 Jul 2020 - Created the test cases for functional
 
 ## Deployment
 
