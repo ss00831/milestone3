@@ -112,7 +112,7 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 |              |            Device 1            |               Device 2               |     Device 3     |                 Device 4                 |         Device 5        |
 |:------------:|:------------------------------:|:------------------------------------:|:----------------:|:----------------------------------------:|:-----------------------:|
 | Device Model |         Macbook Air 13"        |           Samsung NT900X5W           |   iPhone XS Max  |                iPad Air 2                |    LG V30S (LG-H930)    |
-|      OS      |     macOS Catalina 10.15.3     |      Windows 10 Home 10.0.18362      |    iOS 13.5.1    |                iOS 13.5.1                |        Android 9        |
+|      OS      |     macOS Catalina 10.15.3     |      Windows 10 Home 10.0.19041      |    iOS 13.5.1    |                iOS 13.5.1                |        Android 9        |
 |      CPU     | Intel core i5 1.6GHz Dual-Core | Intel core i5-7200 2.50GHz Dual core | Apple A12 Bionic | 1.5GHz tri-core 64-bit ARMv8-A "Typhoon" | Qualcomm Snapdragon 835 |
 |      RAM     |               4GB              |                  8GB                 |        4GB       |                    2GB                   |           6GB           |
 |    Graphic   |     Intel HD Graphics 6000     |         Intel HD Graphics 620        |    APPLE G11P    |              PowerVR GXA6850             |   Qualcomm Adreno 540   |
@@ -128,8 +128,8 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 - Python (http://pep8online.com/) : No error
 
 2. Usability Test
-- All functional test cases (69 items): Not yet
-- Input data test cases (50 items): Not yet
+- All functional test cases (69 items): All pass
+- Input data test cases (50 items): All pass
 
 3. Responsive & Browser Test
 - Pass condition :
@@ -151,16 +151,26 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 | Browser | Version | Device Model Name | OS |
 |:-------:|:-------:|:-----------------:|:--:|
 | Safari        | 13.1.2 (15609.3.5.1.3)        |  Macbook Air 13"                 | macOS Catalina 10.15.6   |
-| Chrome        |  84.0.4147.89        |  Samsung NT900X5W                 | Windows 10 Home 10.0.18362   |
-| Firefox        | 78.0.2 (64bits)        |  Samsung NT900X5W                 | Windows 10 Home 10.0.18362   |
-| Internet Explorer        | 11.959.18362.0        | Samsung NT900X5W                  | Windows 10 Home 10.0.18362   |
-| Edge        | 84.0.522.44        | Samsung NT900X5W                  | Windows 10 Home 10.0.18362   |
+| Chrome        |  84.0.4147.89        |  Samsung NT900X5W                 | Windows 10 Home 10.0.19041   |
+| Firefox        | 78.0.2 (64bits)        |  Samsung NT900X5W                 | Windows 10 Home 10.0.19041   |
+| Internet Explorer        | 11.959.18362.0        | Samsung NT900X5W                  | Windows 10 Home 10.0.19041   |
+| Edge        | 84.0.522.44        | Samsung NT900X5W                  | Windows 10 Home 10.0.19041   |
 
 4. The detailed result : Please refer the test sheet as below.
-- Not yet
 
-### Testing history (example, modify)
+[rev03_testcases_20200730.xlsx](https://github.com/ss00831/milestone3/files/4999827/rev03_testcases_20200730.xlsx)
+
+5. Bugs
+- index.html (/get_index) : If a recipe has a long recipe title, the nationality is not visible.
+- addrecipe.html (/add_recipe) and editrecipe (/edit_recipe) : (Only for Apple products) Only the Safari built-in button works correctly. Please refer the pictures as below.
+
+Custom HTML select tag : ![bug3-1](https://user-images.githubusercontent.com/53374745/88897932-58f4b100-d24c-11ea-99d2-7492edd2e2b1.jpg)
+
+Safari built-in select button : ![bug3-2](https://user-images.githubusercontent.com/53374745/88897929-585c1a80-d24c-11ea-8f59-94e4c207be77.jpg)
+
+### Testing history
 1. 29 Jul 2020 - Created the test cases for functional, responsive & browser testing
+2. 30 Jul 2020 - Functional, input data, responsive & browser testing
 
 ## Deployment
 
