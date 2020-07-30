@@ -150,12 +150,16 @@ def edit_recipe(recipe_id):
 * How to append existing array in existing collection in mongodb
   : https://stackoverflow.com/questions/31956696
   /how-to-append-existing-array-in-existing-collection-in-mongodb-using-java-with-n
+
+- Users can't edit the deletion password. 
+The value of password field will be the same as the saved data in add_recipe.
 """
 
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
+    del_recipe_id = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     ingredient_dict = [ingredient for ingredient in request.form.keys()
                        if "ingredient_name_" in ingredient]
     instruction_dict = [instruction for instruction in request.form.keys()
@@ -175,7 +179,7 @@ def update_recipe(recipe_id):
         'ingredients': ingredient,
         'instructions': instruction,
         'photo_url': request.form.get('photo_url'),
-        'del_password': request.form.get('del_password')
+        'del_password': del_recipe_id['del_password']
     })
     return redirect(url_for('get_recipes'))
 

@@ -173,6 +173,13 @@ ol.instruction-list li{
     margin: 2rem;
 }
 
+/* ---- addrecipe.html (/add_recipe) & editrecipe.html (/edit_recipe/<recipe_id>) ---- */
+.delete_caution{
+    color: red;
+    font-weight: 600;
+}
+
+
 /* --------------- aboutus.html ---------- */
 .small-title{
     font-weight: 600;
@@ -232,12 +239,6 @@ footer {
     color: #040036;
     font-size: 2.25rem;
 }
-/*
-@media screen and (max-width: 1140.02px) {
-    .card-title {
-        font-size: 1.25rem;
-    }
-}*/
 
 @media screen and (max-width: 992.02px) {
     /* --------------- index.html : /get_index ---------- */
@@ -280,6 +281,9 @@ footer {
     .edit_recipe_form{
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+    .delete_caution{
+        margin-left: 2rem;
     }
     .add_ingredient_field_button, .add_instruction_field_button, .add_ingredient_field_button_edit, .add_instruction_field_button_edit{
         margin-left: 2rem;

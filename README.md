@@ -128,8 +128,9 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 - Python (http://pep8online.com/) : No error
 
 2. Usability Test
-- All functional test cases (69 items): All pass
-- Input data test cases (50 items): All pass
+- All functional test cases (68 items): All pass
+- Input data test cases (47 items): All pass
++) 07/30/2020: Due to take away the password field in editrecipe.html (edit_recipe), the test cases have reduced.
 
 3. Responsive & Browser Test
 - Pass condition :
@@ -163,6 +164,7 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 5. Bugs
 - index.html (/get_index) : If a recipe has a long recipe title, the nationality is not visible.
 - addrecipe.html (/add_recipe) and editrecipe (/edit_recipe) : (Only for Apple products) Only the Safari built-in button works correctly. Please refer the pictures as below.
+- Delete a recipe : If anyone can easily change the password, there is no point in giving the password to delete the recipe. 
 
 Custom HTML select tag : ![bug3-1](https://user-images.githubusercontent.com/53374745/88897932-58f4b100-d24c-11ea-99d2-7492edd2e2b1.jpg)
 
