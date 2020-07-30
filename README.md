@@ -121,6 +121,8 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 1. Code validation
 - html (https://validator.w3.org/, Validate by URI) : No error
+* If a Phoro url field is blank, 1 error on singlerecipe.html and recipes.html
+ "Bad value for attribute src on element img: Must be non-empty."
 - CSS (https://jigsaw.w3.org/css-validator/, Validate by direct input) : No error
 - JS (https://jshint.com/) 
  * function.js: 19 warnings

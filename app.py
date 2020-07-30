@@ -151,8 +151,8 @@ def edit_recipe(recipe_id):
   : https://stackoverflow.com/questions/31956696
   /how-to-append-existing-array-in-existing-collection-in-mongodb-using-java-with-n
 
-- Users can't edit the deletion password. 
-The value of password field will be the same as the saved data in add_recipe.
+- Users can't edit the deletion password.
+The value of Password field will be the same as the saved data in add_recipe.
 """
 
 

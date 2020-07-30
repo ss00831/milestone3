@@ -179,7 +179,6 @@ ol.instruction-list li{
     font-weight: 600;
 }
 
-
 /* --------------- aboutus.html ---------- */
 .small-title{
     font-weight: 600;
@@ -242,11 +241,12 @@ footer {
 
 @media screen and (max-width: 992.02px) {
     /* --------------- index.html : /get_index ---------- */
-     .index-preview > .card-image img{
-         height: 18rem;
+    .index-preview > .card-image img{
+        height: 18rem;
     }
-     .recipes-preview > .card-image img{
-         height: 18rem;
+    
+    .recipes-preview > .card-image img{
+        height: 18rem;
     }
 
     /* --------------- aboutus.html : / get_info ---------- */
@@ -274,33 +274,40 @@ footer {
     .recipes-preview > .card-image img{
         height: 18rem;
     }
+    
     /* ---- addrecipe.html (/add_recipe) & editrecipe.html (/edit_recipe/<recipe_id>) ---- */
     .add_recipe_form{
         margin: 0rem;
     }
+    
     .edit_recipe_form{
         margin-left: 1rem;
         margin-right: 1rem;
     }
+    
     .delete_caution{
         margin-left: 2rem;
     }
+    
     .add_ingredient_field_button, .add_instruction_field_button, .add_ingredient_field_button_edit, .add_instruction_field_button_edit{
         margin-left: 2rem;
     }
+    
     .remove_field_button{
         margin-left: 1rem;
     }
+    
     /* ------ singlerecipe.html : /get_recipes/<recipe_id>  ------ */
     .ingredient-list, .instruction-list{
         margin: 0 0.4rem;
     }
+    
     .instruction-list{
         margin-right: 0.4rem;
     }
 }
 
- @media screen and (max-width: 500.02px) {
+@media screen and (max-width: 500.02px) {
     /* --------------- navbar ---------- */
     nav .brand-logo {
         font-size: 1.9375rem;
