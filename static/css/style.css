@@ -149,6 +149,11 @@ ol.instruction-list li{
     margin-top: 2rem;
 }
 
+.goback_recipe > .btn{
+    color: #1a0b54;
+    font-weight: 600;
+}
+
 .single-recipe-img > img{
     max-height: 30rem;
     width: auto;
@@ -237,6 +242,33 @@ footer {
 .social-links a > i{
     color: #040036;
     font-size: 2.25rem;
+}
+
+@media screen and (min-width: 2500.02px) {
+/* ---------card images : index.html (/get_index) & recipes.html (/get_recipes)   ---------- */
+    .card-image img{
+        height: 30rem;
+    }
+}
+
+@media screen and (min-width: 1900.02px) and (max-width: 2500.01px) {
+/* ---------card images : index.html (/get_index) & recipes.html (/get_recipes)   ---------- */
+    .card-image img{
+        height: 25rem;
+    }
+}
+
+@media screen and (min-width: 1500.02px) and (max-width: 1900.01px) {
+/* ---------card images : index.html (/get_index) & recipes.html (/get_recipes)   ---------- */
+    .card-image img{
+        height: 20rem;
+    }
+}
+@media screen and (min-width: 1200.02px) and (max-width: 1500.01px) {
+/* ---------card images : index.html (/get_index) & recipes.html (/get_recipes)   ---------- */
+    .card-image img{
+        height: 16rem;
+    }
 }
 
 @media screen and (max-width: 992.02px) {
