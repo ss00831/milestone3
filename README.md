@@ -161,24 +161,28 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 4. The detailed result : Please refer the test sheet as below.
 
-[rev03_testcases_20200730.xlsx](https://github.com/ss00831/milestone3/files/4999827/rev03_testcases_20200730.xlsx)
+[rev05_testcases_20200731.xlsx](https://github.com/ss00831/milestone3/files/5005866/rev05_testcases_20200731.xlsx)
+
 
 5. Bugs
 - index.html (/get_index) : If a recipe has a long recipe title, the nationality is not visible.
 - addrecipe.html (/add_recipe) and editrecipe (/edit_recipe) : (Only for Apple products) Only the Safari built-in button works correctly. Please refer the pictures as below.
-- Delete a recipe : If anyone can easily change the password, there is no point in giving the password to delete the recipe. 
-
 Custom HTML select tag : ![bug3-1](https://user-images.githubusercontent.com/53374745/88897932-58f4b100-d24c-11ea-99d2-7492edd2e2b1.jpg)
 
 Safari built-in select button : ![bug3-2](https://user-images.githubusercontent.com/53374745/88897929-585c1a80-d24c-11ea-8f59-94e4c207be77.jpg)
 
+- Delete a recipe (closed): If anyone can easily change the password, there is no point in giving the password to delete the recipe. 
+ * 07/31/2020 - Take away the password field in editrecipe.html
+
+
 ### Testing history
 1. 29 Jul 2020 - Created the test cases for functional, responsive & browser testing
 2. 30 Jul 2020 - Functional, input data, responsive & browser testing
+3. 31 Jul 2020 - Functional, input data testing
 
 ## Deployment
 
-### My Milestone2 page address : https://noodleworld-ms3.herokuapp.com/
+### My Milestone3 page address : https://noodleworld-ms3.herokuapp.com/
 
 ### To deploy this page to GitHub Pages from its GitHub repository (https://github.com/ss00831/milestone3) :
 1. Create "requirements.txt" file
