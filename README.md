@@ -203,7 +203,11 @@ echo web: python3 app.py > Procfile
 : Login MongoDB - Select your cluster - click "CONNECT" button - click "Connect your application" - Select your driver and version - Copy the url - Paste in the env.py file
 +) The url example: "mongodb+srv://root:xxxx@myfirstcluster-xxxxx.mongodb.net/COLLECTIONNAME?retryWrites=true&w=majority".
 5. Deploy to Heroku
-: git add . -> git commit -m "commit comment" -> git remote -v -> git push -u heroku master
+- git add . 
+- git commit -m "commit comment" 
+- Check a linked remote: git remote -v 
+- (If it doesn't exist any linked remote) To link a remote: git remote add heroku https://git.heroku.com/noodleworld-ms3.git
+- git push -u heroku master
 6. To scale dynos 
 ```
 heroku ps:scale web=1 
