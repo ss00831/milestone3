@@ -167,7 +167,6 @@ ol.instruction-list li{
     padding: 1rem 0;
 }
 
-
 .delete-fail > div{
     font-size: 1.5rem;
     color: red;
@@ -178,7 +177,6 @@ ol.instruction-list li{
     margin: 2rem;
 }
 
-/* ---- addrecipe.html (/add_recipe) & editrecipe.html (/edit_recipe/<recipe_id>) ---- */
 .delete_caution{
     color: red;
     font-weight: 600;

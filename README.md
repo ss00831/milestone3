@@ -47,7 +47,8 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 
 ### Features Left to Implement
-- Login function
+- Login function: At the moment, this project has not the login function, therefore I have made the recipe deletion password instead.
+
 
 
 ## Information Architecture
