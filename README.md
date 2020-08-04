@@ -132,8 +132,9 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 2. Usability Test
 - All functional test cases (68 items): All pass
-- Input data test cases (47 items): All pass
+- Input data test cases (47 items) + delete password test (15 cases): All pass
 +) 07/30/2020: Due to take away the password field in editrecipe.html (edit_recipe), the test cases have reduced.
++) 08/04/2020: Added the 15 cases for deletion test
 
 3. Responsive & Browser Test
 - Pass condition :
@@ -172,14 +173,11 @@ Custom HTML select tag : ![bug3-1](https://user-images.githubusercontent.com/533
 
 Safari built-in select button : ![bug3-2](https://user-images.githubusercontent.com/53374745/88897929-585c1a80-d24c-11ea-8f59-94e4c207be77.jpg)
 
-- Delete a recipe (closed): If anyone can easily change the password, there is no point in giving the password to delete the recipe. 
- * 07/31/2020 - Take away the password field in editrecipe.html
-
-
 ### Testing history
 1. 29 Jul 2020 - Created the test cases for functional, responsive & browser testing
 2. 30 Jul 2020 - Functional, input data, responsive & browser testing
 3. 31 Jul 2020 - Functional, input data testing
+4. 4 Aug 2020 - Functional, input data and deletion testing
 
 ## Deployment
 
