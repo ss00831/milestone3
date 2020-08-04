@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, url_for, request, flash
+from flask import Flask, render_template, redirect, url_for, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 if os.path.exists("env.py"):
@@ -82,7 +82,6 @@ def add_recipe():
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
-
     ingredient_dict = [ingredient for ingredient in request.form.keys()
                        if "ingredient_name_" in ingredient]
     instruction_dict = [instruction for instruction in request.form.keys()
