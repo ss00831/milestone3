@@ -25,11 +25,11 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 3. An external user wants to edit a recipe.
  - Every page has an “Edit Recipe” button and it has an edit form. : UPDATE
 4. An external user wants to remove a recipe.
- - If the password is correct, anyone remove the recipe. : DELETE
+ - If the password is correct, anyone removes the recipe. : DELETE
 5. An external user can send a message.
  - Use EmailJS 
 
-### Mockup
+### Wireframes
 - [ms3-tablet.pdf](https://github.com/ss00831/milestone3/files/4977466/ms3-tablet.pdf)
 - [ms3-desktop.pdf](https://github.com/ss00831/milestone3/files/4977467/ms3-desktop.pdf)
 - [ms3-mobile.pdf](https://github.com/ss00831/milestone3/files/4977468/ms3-mobile.pdf)
@@ -43,12 +43,11 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 - Add recipe: Create a new recipe.
 - Edit recipe: Change and Update a recipe.
 - Delete recipe
-- Send Message : Use EmailJS API.
+- Send Message: Use EmailJS API.
 
 
 ### Features Left to Implement
-- Login function: At the moment, this project has not the login function, therefore I have made the recipe deletion password instead.
-
+- Login function: At the moment, this project has not the login function; therefore I have made the recipe deletion password instead.
 
 
 ## Information Architecture
@@ -94,7 +93,7 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 ### Tools & Libraries 
 - Flask 1.1.2 (https://flask.palletsprojects.com/en/1.1.x/)
 - MongoDB 4.2.8 (https://www.mongodb.com/)
-- JQuery 3.5.0 (https://jquery.com)
+- JQuery 3.5.1 (https://jquery.com)
 - Materializecss 1.0.0 (https://materializecss.com/)
 - Fontawesome 5.12.1 (https://fontawesome.com/)
 - Google font (https://fonts.google.com/)
@@ -122,8 +121,10 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 1. Code validation
 - html (https://validator.w3.org/, Validate by URI) : No error
-* If a Phoro url field is blank, 1 error on singlerecipe.html and recipes.html
- "Bad value for attribute src on element img: Must be non-empty."
+* Note about singlerecipe.html and recipes.html 
+ : If a Photo url field is blank, 1 error on each page.
+   The error is "Bad value for attribute src on element img: Must be non-empty."
+ : If I select "check by text input", it's no problem.  
 - CSS (https://jigsaw.w3.org/css-validator/, Validate by direct input) : No error
 - JS (https://jshint.com/) 
  * function.js: 19 warnings
@@ -168,7 +169,11 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 5. Bugs
 - index.html (/get_index) : If a recipe has a long recipe title, the nationality is not visible.
+
+![bugid2](https://user-images.githubusercontent.com/53374745/89405003-27cc2300-d71b-11ea-86a8-95a4b00d5575.png)
+
 - addrecipe.html (/add_recipe) and editrecipe (/edit_recipe) : (Only for Apple products) Only the Safari built-in button works correctly. Please refer the pictures as below.
+
 Custom HTML select tag : ![bug3-1](https://user-images.githubusercontent.com/53374745/88897932-58f4b100-d24c-11ea-99d2-7492edd2e2b1.jpg)
 
 Safari built-in select button : ![bug3-2](https://user-images.githubusercontent.com/53374745/88897929-585c1a80-d24c-11ea-8f59-94e4c207be77.jpg)
@@ -178,6 +183,7 @@ Safari built-in select button : ![bug3-2](https://user-images.githubusercontent.
 2. 30 Jul 2020 - Functional, input data, responsive & browser testing
 3. 31 Jul 2020 - Functional, input data testing
 4. 4 Aug 2020 - Functional, input data and deletion testing
+5. 6 Aug 2020 - Deletion testing : Check the changed error message
 
 ## Deployment
 

@@ -169,7 +169,13 @@ ol.instruction-list li{
 
 .delete-fail > div{
     font-size: 1.5rem;
+}
+
+.fail-reason {
     color: red;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 /* ---- addrecipe.html (/add_recipe) & editrecipe.html (/edit_recipe/<recipe_id>) ---- */

@@ -3,6 +3,11 @@
     <div>
     {% if error %}
         <p><strong>Error:</strong> {{ error }}</p>
+        <div class="fail-reason">
+            The reason of delete fail:<br> 
+            The input password is incorrect.<br>
+            The password is case-sensitive.
+        </div>
     {% endif %}
     </div>
     
