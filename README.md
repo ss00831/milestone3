@@ -291,3 +291,5 @@ http://127.0.0.1:5000/
  - https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown
 10. Table generator 
  - https://www.tablesgenerator.com/markdown_tables
+11. Auto break line in HTML
+ - https://stackoverflow.com/questions/5852700/auto-break-line-in-html
