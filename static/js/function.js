@@ -23,9 +23,8 @@ $(document).ready(function () {
 
   let x = 0; //initlal text box count for add page of ingredients
   let y = 0; //initlal text box count for add page of instruction
-  
-  let x1 = -1; //initlal text box count for edit page of ingredients 
-  let y1 = -1; //initlal text box count for edit page of instruction
+  let x1 = 0; //initlal text box count for edit page of ingredients 
+  let y1 = 0; //initlal text box count for edit page of instruction
 
   // for add page of ingredients
   $(add_ingredient_button).click(function (e) {
@@ -49,7 +48,7 @@ $(document).ready(function () {
     //on add input button click
     e.preventDefault();
     let added_ingredients_field = document.querySelectorAll('.ingredient').length;
-    x1 = added_ingredients_field;
+    x1 = added_ingredients_field - 1;
     if (x1 < max_fields) {
       //max input box allowed
       x1++; //text box increment
@@ -72,7 +71,7 @@ $(document).ready(function () {
       y++; //text box increment
       name = "instructions_name_" + y;
       $(input_instruction).append(
-        '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
+        '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="instructions validate" name=' +
           name +
           ' placeholder="If you don&apos;t need this field, please remove it." type="text" required/>'
       ); //add input box
@@ -84,13 +83,13 @@ $(document).ready(function () {
     //on add input button click
     e.preventDefault();
     let added_instructions_field = document.querySelectorAll('.instructions').length;
-    y1 = added_instructions_field;
+    y1 = added_instructions_field - 1;
     if (y1 < max_fields) {
       //max input box allowed
       y1++; //text box increment
       name = "instructions_name_" + y1;
       $(input_instruction_edit).append(
-        '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="ingredient validate" name=' +
+        '<a class="remove_field_button red lighten-1 waves-effect waves-light btn-small"><i class="material-icons left">remove_circle_outline</i>Remove</a><input class="instructions validate" name=' +
           name +
           ' placeholder="If you don&apos;t need this field, please remove it." type="text" required/>'
       ); //add input box
