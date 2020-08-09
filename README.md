@@ -172,11 +172,17 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 ![bugid2](https://user-images.githubusercontent.com/53374745/89405003-27cc2300-d71b-11ea-86a8-95a4b00d5575.png)
 
++) 08/09/2020 : Recipe name field - Fixed to maximum 60 characters, added auto break line on indexh3 class and card-title class
+
 - addrecipe.html (/add_recipe) and editrecipe (/edit_recipe) : (Only for Apple products) Only the Safari built-in button works correctly. Please refer the pictures as below.
 
-Custom HTML select tag : ![bug3-1](https://user-images.githubusercontent.com/53374745/88897932-58f4b100-d24c-11ea-99d2-7492edd2e2b1.jpg)
+Custom HTML select tag :
 
-Safari built-in select button : ![bug3-2](https://user-images.githubusercontent.com/53374745/88897929-585c1a80-d24c-11ea-8f59-94e4c207be77.jpg)
+![bug3-1](https://user-images.githubusercontent.com/53374745/89729327-dc748600-da34-11ea-9b72-76113ecb23ed.jpg)
+
+Safari built-in select button : 
+
+![bug3-2](https://user-images.githubusercontent.com/53374745/89729328-dd0d1c80-da34-11ea-82c0-2d2e3f954e72.jpg)
 
 ### Testing history
 1. 29 Jul 2020 - Created the test cases for functional, responsive & browser testing
@@ -184,6 +190,7 @@ Safari built-in select button : ![bug3-2](https://user-images.githubusercontent.
 3. 31 Jul 2020 - Functional, input data testing
 4. 4 Aug 2020 - Functional, input data and deletion testing
 5. 6 Aug 2020 - Deletion testing : Check the changed error message
+6. 8 Aug 2020 - Check indexh3 and card-title class
 
 ## Deployment
 
