@@ -12,6 +12,7 @@ $(document).ready(function () {
 // https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery
 $(document).ready(function () {
   let max_fields = 100; //maximum input boxes allowed
+
   let input_ingredient = $(".input_fields_ingredient"); //Fields wrapper for ingredient in addrecipe.html
   let input_instruction = $(".input_fields_instruction"); //Fields wrapper for instruction in addrecipe.html
   let input_ingredient_edit = $(".input_fields_ingredient_edit"); //Fields wrapper for ingredient in editrecipe.html
@@ -25,6 +26,13 @@ $(document).ready(function () {
   let y = 0; //initlal text box count for add page of instruction
   let x1 = 0; //initlal text box count for edit page of ingredients 
   let y1 = 0; //initlal text box count for edit page of instruction
+
+  // To get the number of fields
+  let added_ingredients_field = document.querySelectorAll('.ingredient').length;
+  let added_instructions_field = document.querySelectorAll('.instructions').length;
+  
+  x1 = added_ingredients_field - 1;
+  y1 = added_instructions_field - 1;
 
   // for add page of ingredients
   $(add_ingredient_button).click(function (e) {
@@ -47,8 +55,6 @@ $(document).ready(function () {
   $(add_ingredient_button_edit).click(function (e) {
     //on add input button click
     e.preventDefault();
-    let added_ingredients_field = document.querySelectorAll('.ingredient').length;
-    x1 = added_ingredients_field + 1;
     if (x1 < max_fields) {
       //max input box allowed
       x1++; //text box increment
@@ -82,8 +88,6 @@ $(document).ready(function () {
   $(add_instruction_button_edit).click(function (e) {
     //on add input button click
     e.preventDefault();
-    let added_instructions_field = document.querySelectorAll('.instructions').length;
-    y1 = added_instructions_field + 1;
     if (y1 < max_fields) {
       //max input box allowed
       y1++; //text box increment
@@ -111,7 +115,6 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).next().remove();
     $(this).remove();
-    x1--;
   });
 
   // remove button for instructions field on add page
@@ -129,6 +132,5 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).next().remove();
     $(this).remove();
-    y1--;
   });
 });
