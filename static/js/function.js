@@ -48,7 +48,7 @@ $(document).ready(function () {
     //on add input button click
     e.preventDefault();
     let added_ingredients_field = document.querySelectorAll('.ingredient').length;
-    x1 = added_ingredients_field - 1;
+    x1 = added_ingredients_field + 1;
     if (x1 < max_fields) {
       //max input box allowed
       x1++; //text box increment
@@ -83,7 +83,7 @@ $(document).ready(function () {
     //on add input button click
     e.preventDefault();
     let added_instructions_field = document.querySelectorAll('.instructions').length;
-    y1 = added_instructions_field - 1;
+    y1 = added_instructions_field + 1;
     if (y1 < max_fields) {
       //max input box allowed
       y1++; //text box increment
