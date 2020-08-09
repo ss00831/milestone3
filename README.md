@@ -10,11 +10,11 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 - Tablet 
 
-![MS_Capture_tablet](https://user-images.githubusercontent.com/53374745/88457670-9a6e1080-ce88-11ea-9f77-a94a91ccacf5.jpg)
+![MS_Capture_tablet](https://user-images.githubusercontent.com/53374745/89730044-7a6b4f00-da3b-11ea-94e9-bb81c3e9fd5d.jpg)
 
 - Mobile 
 
-![MS_Capture_mobile](https://user-images.githubusercontent.com/53374745/88457664-8fb37b80-ce88-11ea-8259-ca105d38e06f.jpg)
+![MS_Capture_mobile](https://user-images.githubusercontent.com/53374745/89730043-79d2b880-da3b-11ea-9c10-3172fad8163c.jpg)
 
 
 ### User scenario
