@@ -19,13 +19,13 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 ### User scenario
 1. An external user wants to see noodles recipes.
- - Ability to view the recipes : READ
+ - Ability to view the recipes: READ
 2. An external user wants to add and share a recipe.
- - Use an add recipe form. : CREATE
+ - Use an add recipe form: CREATE
 3. An external user wants to edit a recipe.
- - Every page has an “Edit Recipe” button and it has an edit form. : UPDATE
+ - Every page has an “Edit Recipe” button and it has an edit form.: UPDATE
 4. An external user wants to remove a recipe.
- - If the password is correct, anyone removes the recipe. : DELETE
+ - If the password is correct, anyone removes the recipe.: DELETE
 5. An external user can send a message.
  - Use EmailJS 
 
@@ -99,7 +99,7 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 - Google font (https://fonts.google.com/)
 - Github (https://github.com/)
 - Gitpod (https://www.gitpod.io/)
-- Heroku (https://www.heroku.com/) : For deployment
+- Heroku (https://www.heroku.com/): For deployment
 
 ### APIs
 - Email JS (http://emailjs.com/)
@@ -120,16 +120,16 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 
 1. Code validation
-- html (https://validator.w3.org/, Validate by URI) : No error
-* Note about singlerecipe.html and recipes.html 
- : If a Photo url field is blank, 1 error on each page.
+- html (https://validator.w3.org/, Validate by URI): No error
+* Note about index.html/recipes.html/singlerecipe.html 
+ : If a Photo url field is blank, an error on each page.
    The error is "Bad value for attribute src on element img: Must be non-empty."
  : If I select "check by text input", it's no problem.  
-- CSS (https://jigsaw.w3.org/css-validator/, Validate by direct input) : No error
+- CSS (https://jigsaw.w3.org/css-validator/, Validate by direct input): No error
 - JS (https://jshint.com/) 
  * function.js: 19 warnings
  * sendMessage.js: No error and warning.
-- Python (http://pep8online.com/) : No error
+- Python (http://pep8online.com/): No error
 
 2. Usability Test
 - All functional test cases (68 items): All pass
@@ -168,13 +168,13 @@ Many people enjoy eating noodles and pasta. There may be some recipes already sh
 
 
 5. Bugs
-- index.html (/get_index) : If a recipe has a long recipe title, the nationality is not visible.
+- index.html (/get_index): If a recipe has a long recipe title, the nationality is not visible.
 
 ![bugid2](https://user-images.githubusercontent.com/53374745/89405003-27cc2300-d71b-11ea-86a8-95a4b00d5575.png)
 
-+) 08/09/2020 : Recipe name field - Fixed to maximum 60 characters, added auto break line on indexh3 class and card-title class
++) 08/09/2020: Recipe name field - Fixed to maximum 60 characters, added auto break line on indexh3 class and card-title class
 
-- addrecipe.html (/add_recipe) and editrecipe (/edit_recipe) : (Only for Apple products) Only the Safari built-in button works correctly. Please refer the pictures as below.
+- addrecipe.html (/add_recipe) and editrecipe (/edit_recipe) : (Only for Apple products) Only the Safari built-in button works correctly. Please refer to the pictures below.
 
 Custom HTML select tag :
 
@@ -191,7 +191,7 @@ Safari built-in select button :
 4. 4 Aug 2020 - Functional, input data and deletion testing
 5. 6 Aug 2020 - Deletion testing : Check the changed error message
 6. 8 Aug 2020 - Check indexh3 and card-title class
-7. 1o Aug 2020 - Functional, input data, responsive & browser testing
+7. 10 Aug 2020 - Functional, input data, responsive & browser testing
 
 ## Deployment
 
