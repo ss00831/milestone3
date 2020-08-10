@@ -191,6 +191,7 @@ Safari built-in select button :
 4. 4 Aug 2020 - Functional, input data and deletion testing
 5. 6 Aug 2020 - Deletion testing : Check the changed error message
 6. 8 Aug 2020 - Check indexh3 and card-title class
+7. 1o Aug 2020 - Functional, input data, responsive & browser testing
 
 ## Deployment
 
