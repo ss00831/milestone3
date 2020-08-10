@@ -106,7 +106,6 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).next().remove();
     $(this).remove();
-    x--;
   });
 
   // remove button for ingredient field on edit page
@@ -123,7 +122,6 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).next().remove();
     $(this).remove();
-    y--;
   });
 
   // remove button for instructions field on edit page
